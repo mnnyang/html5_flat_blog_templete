@@ -7,6 +7,7 @@ body, html, ul, li, h1, h2, h3, h4 {
 
 html {
     height: 100%;
+    font-family: "Hiragino Kaku Gothic Pro", serif;
 }
 
 body {
@@ -34,7 +35,6 @@ ul {
     margin: 0 auto;
     min-height: 2000px;
 
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
     box-sizing: border-box;
 }
 
@@ -77,8 +77,8 @@ ul {
 }
 
 .header .site-title {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
     font-weight: bold;
 }
 
@@ -150,6 +150,8 @@ ul {
     height: 100%;
     background-color: rgba(241, 243, 244, 1);
     position: relative;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
     top: 50px;
 }
 
@@ -192,8 +194,8 @@ ul {
 }
 
 .glide-left .avatar-box img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     display: block;
     margin: 0 auto;
     border-radius: 50px;
@@ -362,7 +364,7 @@ ul {
     border-right: 1px solid rgba(0, 0, 0, 0.07);
     border-left: 1px solid rgba(0, 0, 0, 0.07);
     color: rgba(121, 133, 138, 1);
-    padding: 8px;
+    padding: 10px;
     font-weight: normal;
     cursor: pointer;
 }
@@ -416,6 +418,47 @@ ul {
     cursor: pointer;
 }
 
+/**********************directory*/
+#tab .tab-content-item .directory {
+    /*position: fixed;*/
+    /*top: 58px;*/
+    /*background: white;*/
+    /*padding-bottom: 60px;*/
+    position: relative;
+    width: 209px;
+
+}
+
+#tab .tab-content-item .directory .directory-list {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#tab .tab-content-item .directory .directory-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+    color: rgba(121, 133, 138, 1);
+    padding: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#tab .tab-content-item .directory .directory-item:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#tab .tab-content-item .directory .directory-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#tab .tab-content-item .directory .directory-list .directory-title {
+    font-size: 14px;
+}
+
 /***********************middle*/
 .controller .middle {
     width: 720px;
@@ -423,14 +466,109 @@ ul {
     float: left;
 }
 
-.controller .middle .middle-title {
-    font-size: 24px;
+.controller .middle .middle-header {
     background: rgba(246, 248, 248, 1);
-    padding: 18px;
+    padding: 20px;
     color: rgba(0, 0, 0, 0.9);
     border-bottom: 1px rgba(57, 62, 79, 0.15) solid;
-    font-weight: normal;
 }
+
+.controller .middle .middle-header h1 {
+    font-weight: normal;
+    font-size: 24px;
+
+}
+
+.controller .middle .middle-header .desc {
+    font-size: 12px;
+    margin-top: 2px;
+    letter-spacing: 2px;
+    color: rgba(170, 183, 188, 1);
+}
+
+.middle .middle-list {
+    padding: 20px;
+}
+
+.card-big-article {
+    width: 100%;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.card-big-article img {
+    width: 100%;
+}
+
+.card-big-article .img {
+    padding: 1px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 220px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-small-article .text,
+.card-big-article .text {
+    padding: 20px 28px;
+}
+
+.card-big-article .text h2,
+.card-small-article .text h2 {
+    font-weight: normal;
+    font-size: 30px;
+    color: dimgray;
+    cursor: pointer;
+}
+
+.card-big-article .text .desc,
+.card-small-article .text .desc {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    color: rgba(120, 132, 138, 1);
+    padding-bottom: 12px;
+    border-bottom: 1px rgba(57, 62, 79, 0.07) solid;
+}
+
+.card-big-article .text .footer,
+.card-small-article .text .footer {
+    padding: 12px 0;
+    font-size: 14px;
+    color: rgba(170, 183, 188, 1);
+}
+
+.text .footer .author,
+.text .footer .date,
+.text .footer .comment {
+    margin-right: 10px;
+}
+
+.card-small-article {
+    width: 100%;
+    background: white;
+    margin-bottom: 20px;
+    height: 180px;
+}
+
+.card-small-article img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-small-article .img {
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+.card-small-article .text {
+    width: 420px;
+    float: right;
+}
+
+
 
 
 

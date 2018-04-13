@@ -149,9 +149,59 @@
 
         <div class="middle float-left">
             <div content="middle-content">
-                <h1 class="middle-title">
-                    分来 个人爱好 下的文章
-                </h1>
+                <div class="middle-header">
+
+                    <h1>友人C</h1>
+                    <div class="desc">网站的一下描述而已。</div>
+                </div>
+
+                <div class="middle-list">
+                    <div class="card-big-article">
+                        <div class="img">
+                            <img src="images/avatar.jpg">
+                        </div>
+
+                        <div class="text">
+                            <h2>这是一个文章标题</h2>
+                            <div class="desc">
+                                这是一些描述,这是一些描述,这是一些描述,这是一些描述,这是一些描述,这是一些描述,这是一些描述...
+                            </div>
+                            <div class="footer">
+                                <span class="fa fa-user"></span>
+                                <span class="author">友人c</span>
+
+                                <span class="fa fa-calendar-times-o"></span>
+                                <span class="date">2018 年 04 月 08 日</span>
+
+                                <span class="fa fa-comment"></span>
+                                <span class="comment">12条评论</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-small-article">
+                        <div class="img">
+                            <img src="images/avatar.jpg">
+                        </div>
+                        <div class="text">
+                            <h2>这是一个文章标题</h2>
+                            <div class="desc">
+                                这是一些描述,这是一些描述,这是一些描述,这是一些描述,这是一些描述,这是一些描述,这是一些描述...
+                            </div>
+                            <div class="footer">
+                                <span class="fa fa-user"></span>
+                                <span class="author">友人c</span>
+
+                                <span class="fa fa-calendar-times-o"></span>
+                                <span class="date">2018 年 04 月 08 日</span>
+
+                                <span class="fa fa-comment"></span>
+                                <span class="comment">12条评论</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
         <div class="glide-right float-right">
@@ -163,7 +213,7 @@
                 </ul>
 
                 <div class="tab-content">
-                    <div class="tab-content-item">
+                    <div class="tab-content-item select">
                         <div class="sort">
                             <h2>分类</h2>
                             <ul class="sort-list">
@@ -204,21 +254,46 @@
                             <div style="clear:both;"></div>
                         </div>
 
-                        <div class="directory">
+                        <div class="directory" id="directory">
                             <h2>目录</h2>
                             <ul class="directory-list">
-                                <li class="directory-item">
-                                    <span class="sort-title">程序设计</span>
-                                    <span class="sort-count">12</span>
-                                </li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="tab-content-item">
-                        22
+                        <div class="directory">
+                            <h2>目录</h2>
+                            <ul class="directory-list">
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="tab-content-item">
-                        33
+                        <div class="directory">
+                            <h2>目录</h2>
+                            <ul class="directory-list">
+                                <li class="directory-item click-state"><span class="directory-title">大标题1</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">大标题2</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">大标题3</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                                <li class="directory-item click-state"><span class="directory-title">程序设计</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,12 +313,16 @@
 
             tabTitles[i].id = i;
             $(tabTitles[i]).on('click', function () {
+
                 var $this = $(this);
                 tabTitles.removeClass('select');
                 $this.addClass('select');
 
-                tabContents.hide();
-                $(tabContents[this.id]).show();
+                tabContents.removeClass('select').hide();
+                $(tabContents[this.id]).addClass('select').show();
+
+                updateDirTop();
+
             });
 
             //set default selected
@@ -257,6 +336,7 @@
         var menu_item = sidebar.find('.menu-item');
 
         menu_item.on('click', function () {
+
             var $this = $(this);
             $this.next().slideToggle(1);
             $this.toggleClass('open');
@@ -267,9 +347,48 @@
         sidebar.find('.open').next().show();
     }
 
+
+    var defaultDirTop = 0;
+
+    function updateDirTop() {
+        if (undefined !== $('.select .directory').offset()) {
+            defaultDirTop = $('.select .directory').offset().top;
+            console.log("------>" + defaultDirTop)
+        }
+    }
+
+    function initDirectoryFixed() {
+
+        updateDirTop();
+
+        $(window).scroll(function () {
+            var dir = $('.select .directory');
+
+            if (null == dir) {
+                return;
+            }
+
+            var st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+
+            if (st + 50 > defaultDirTop) {
+                if (dir.css('position') !== 'fixed') {
+                    dir.css('position', 'fixed').css('top', '64px');
+                    console.log("fixed")
+                }
+            } else {
+                if (dir.css('position') !== 'relative') {
+                    dir.css('position', 'relative').css('top', '0px').css('width', '209px');
+                    console.log("relative")
+                }
+            }
+        });
+    }
+
     $(function () {
         initSidebar();
         initTab();
+
+        initDirectoryFixed();
     });
 
 </script>
