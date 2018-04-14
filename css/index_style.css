@@ -1,5 +1,26 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url('../fonts/sourcesanspro-light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url('../fonts/sourcesanspro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url('../fonts/sourcesanspro-bold.woff') format('woff');
+}
+
 body, html, ul, li, h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
@@ -7,7 +28,7 @@ body, html, ul, li, h1, h2, h3, h4 {
 
 html {
     height: 100%;
-    font-family: "Hiragino Kaku Gothic Pro", serif;
+    font-family: "Source Sans Pro", "Hiragino Sans GB", "Microsoft Yahei", Arial, sans-serif;
 }
 
 body {
@@ -27,8 +48,12 @@ ul {
     float: right;
 }
 
-.content {
+.pag-max-width {
     max-width: 1170px;
+
+}
+
+.content {
     width: 100%;
     height: 100%;
     background: white;
@@ -40,7 +65,7 @@ ul {
 
 /*********************header*/
 .header {
-    width: 1170px;
+    width: 100%;
     height: 50px;
     margin: 0 auto;
     background: rgba(57, 62, 79, 1);
@@ -490,6 +515,7 @@ ul {
     padding: 20px;
 }
 
+/*card*/
 .card-big-article {
     width: 100%;
     background: white;
@@ -512,14 +538,15 @@ ul {
 .card-small-article .text,
 .card-big-article .text {
     padding: 20px 28px;
+    box-sizing: border-box;
 }
 
 .card-big-article .text h2,
 .card-small-article .text h2 {
-    font-weight: normal;
     font-size: 30px;
-    color: dimgray;
+    color: #58666e;
     cursor: pointer;
+    font-weight: normal;
 }
 
 .card-big-article .text .desc,
@@ -542,7 +569,7 @@ ul {
 .text .footer .author,
 .text .footer .date,
 .text .footer .comment {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .card-small-article {
@@ -550,6 +577,8 @@ ul {
     background: white;
     margin-bottom: 20px;
     height: 180px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .card-small-article img {
@@ -558,19 +587,93 @@ ul {
 }
 
 .card-small-article .img {
-    width: 200px;
+    width: 30%;
+    padding: 1px;
     height: 100%;
+    box-sizing: border-box;
     float: left;
 }
 
 .card-small-article .text {
-    width: 420px;
-    float: right;
+    /*width: 480px;*/
+    width: 70%;
+    box-sizing: border-box;
+    float: left;
 }
 
+/*@media (min-width: 1400px) {*/
+/*.pag-max-width {*/
+/*max-width: 1300px;*/
+/*}*/
+/*}*/
+
+@media (max-width: 1200px) {
+    .pag-max-width {
+        max-width: 990px;
+    }
+
+    .controller .middle {
+        width: 540px;
+    }
+
+    .card-big-article .text h2,
+    .card-small-article .text h2 {
+        font-size: 25px;
+    }
 
 
+    .card-small-article {
+        height: auto;
+    }
 
+    .card-small-article img {
+        height: auto;
+    }
+    .card-small-article .img {
+        width: 100%;
+        height: 220px;
+        float: none;
+        overflow: hidden;
+    }
 
+    .card-small-article .text {
+        width: 100%;
+        float: none;
+
+    }
+}
+
+@media (max-width: 991px) {
+    .pag-max-width {
+        max-width: 740px;
+    }
+
+    .controller .middle {
+        width: 540px;
+    }
+
+    .glide-right {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pag-max-width {
+        max-width: 100%;
+    }
+
+    .controller .middle {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .glide-right {
+        display: none;
+    }
+
+    .glide-left {
+        display: none;
+    }
+}
 
 
