@@ -48,18 +48,26 @@ ul {
     float: right;
 }
 
+.clear-fix:after {
+    content: '.';
+    background-color: red;
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
 .pag-max-width {
     max-width: 1170px;
-
+    min-width: 320px;
 }
 
 .content {
     width: 100%;
     height: 100%;
-    background: white;
     margin: 0 auto;
-    min-height: 2000px;
-
+    position: relative;
+    top: 0;
     box-sizing: border-box;
 }
 
@@ -75,17 +83,17 @@ ul {
     position: fixed;
 }
 
-.header ul {
+.header .header-menu {
     position: relative;
 }
 
-.header ul li {
+.header .header-menu > div {
     height: 50px;
     line-height: 50px;
-    display: block;
+    vertical-align: middle;
 }
 
-.header ul li:first-child {
+.header > div:first-child {
     margin-left: 16px;
 }
 
@@ -131,32 +139,42 @@ ul {
 }
 
 .header .search {
-    height: 30px;
+    box-sizing: border-box;
     border-radius: 20px;
     background-color: white;
     padding: 0 12px;
+    height: 32px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+}
+
+.header .search > * {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .header .search input {
-    height: 30px;
-    line-height: 30px;
+    height: 32px;
     color: grey;
-    background: blue;
     outline: none;
     background: none;
     border: none;
     font-weight: lighter;
+    vertical-align: middle;
+    float: left;
 }
 
 .header .search span {
-    height: 30px;
-    line-height: 30px;
-    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    vertical-align: middle;
     color: grey;
-
+    float: right;
 }
 
 .header .login {
@@ -170,14 +188,14 @@ ul {
 }
 
 /****************controller*/
-.controller {
+.container {
     width: 100%;
     height: 100%;
     background-color: rgba(241, 243, 244, 1);
     position: relative;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
-    top: 50px;
+    /*top: 50px;*/
+    /*overflow: hidden;*/
 }
 
 .glide-left {
@@ -186,6 +204,7 @@ ul {
     position: fixed;
     height: 100%;
     overflow: hidden;
+    /*box-shadow: -10px 0px 40px rgba(0, 0, 0, 0.25);*/
 }
 
 .glide-left-scroll::-webkit-scrollbar {
@@ -327,16 +346,27 @@ ul {
 
 .glide-right {
     width: 250px;
-    background-color: white;
     height: 100%;
+    background-color: white;
     border-left: 1px rgba(57, 62, 79, 0.15) solid;
     box-sizing: border-box;
+    float: left;
+}
+
+/************************main-page*/
+.main-page {
+    display: table;
+    margin-left: 200px;
+    border-color: #0066cc;
+    width: 970px;
+    padding-top: 50px;
+    height: 100%;
+    background-color: rgba(241, 243, 244, 1);
 }
 
 /*************************tab*/
 #tab ul {
     list-style: none;
-    clear: both;
 }
 
 #tab .tab-title li {
@@ -485,26 +515,29 @@ ul {
 }
 
 /***********************middle*/
-.controller .middle {
+
+.container .middle {
+    display: table-cell;
+    height: 100%;
+    vertical-align: top;
+
     width: 720px;
-    margin-left: 200px;
-    float: left;
 }
 
-.controller .middle .middle-header {
+.container .middle .middle-header {
     background: rgba(246, 248, 248, 1);
     padding: 20px;
     color: rgba(0, 0, 0, 0.9);
     border-bottom: 1px rgba(57, 62, 79, 0.15) solid;
 }
 
-.controller .middle .middle-header h1 {
+.container .middle .middle-header h1 {
     font-weight: normal;
     font-size: 24px;
 
 }
 
-.controller .middle .middle-header .desc {
+.container .middle .middle-header .desc {
     font-size: 12px;
     margin-top: 2px;
     letter-spacing: 2px;
@@ -513,6 +546,7 @@ ul {
 
 .middle .middle-list {
     padding: 20px;
+    box-sizing: border-box;
 }
 
 /*card*/
@@ -601,26 +635,19 @@ ul {
     float: left;
 }
 
-/*@media (min-width: 1400px) {*/
-/*.pag-max-width {*/
-/*max-width: 1300px;*/
-/*}*/
-/*}*/
-
 @media (max-width: 1200px) {
     .pag-max-width {
-        max-width: 990px;
+        max-width: 950px;
     }
 
-    .controller .middle {
-        width: 540px;
+    .container .main-page {
+        width: 750px;
     }
 
     .card-big-article .text h2,
     .card-small-article .text h2 {
         font-size: 25px;
     }
-
 
     .card-small-article {
         height: auto;
@@ -629,6 +656,7 @@ ul {
     .card-small-article img {
         height: auto;
     }
+
     .card-small-article .img {
         width: 100%;
         height: 220px;
@@ -644,36 +672,61 @@ ul {
 }
 
 @media (max-width: 991px) {
+
+    .hide-max-991 {
+        display: none;
+    }
+
     .pag-max-width {
         max-width: 740px;
     }
 
-    .controller .middle {
+    .container .main-page {
         width: 540px;
     }
 
-    .glide-right {
-        display: none;
-    }
+    /*.glide-right {*/
+    /*display: none;*/
+    /*}*/
 }
 
 @media (max-width: 768px) {
+    .hide-max-768 {
+        display: none;
+    }
+
+    .show-max-798 {
+        display: block;
+    }
+
     .pag-max-width {
         max-width: 100%;
     }
 
-    .controller .middle {
-        width: 100%;
+    .container .main-page {
         margin-left: 0;
-    }
-
-    .glide-right {
-        display: none;
-    }
-
-    .glide-left {
-        display: none;
+        width: 100%;
     }
 }
 
+@media (max-width: 600px) {
+    .card-small-article .img,
+    .card-big-article .img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-small-article .img,
+    .card-big-article .img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 320px) {
+    .card-small-article .img,
+    .card-big-article .img {
+        height: 100px;
+    }
+}
 
