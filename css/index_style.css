@@ -57,7 +57,7 @@ ul {
     height: 0;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
@@ -70,7 +70,7 @@ ul {
     padding: 10px;
     position: fixed;
     z-index: 1000;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     top: 150px;
     right: 0;
     outline: none;
@@ -79,7 +79,7 @@ ul {
 
 }
 
-.go-to-top span{
+.go-to-top span {
     font-size: 14px;
 }
 
@@ -619,7 +619,7 @@ ul {
     height: 100%;
     vertical-align: top;
 
-    width: 720px;
+    width: 100%;
 }
 
 .container .middle .middle-header {
@@ -644,7 +644,7 @@ ul {
 
 .breadcrumb {
     margin: 20px 20px 0px 20px;
-    padding: 8px;
+    padding: 8px 16px;
     background: white;
     height: 32px;
     border: 1px solid rgba(57, 62, 79, 0.12);
@@ -701,6 +701,8 @@ ul {
 
 .card-big-article img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-big-article .img {
@@ -712,7 +714,6 @@ ul {
     cursor: pointer;
 }
 
-.card-small-article .text,
 .card-big-article .text {
     padding: 20px 28px;
     box-sizing: border-box;
@@ -753,15 +754,21 @@ ul {
     width: 100%;
     background: white;
     margin-bottom: 20px;
-    height: 180px;
+    height: 220px;
     box-sizing: border-box;
     position: relative;
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, 0.07);
 }
 
+.card-small-article .text {
+    padding: 20px 56px;
+    box-sizing: border-box;
+}
+
 .card-small-article img {
     width: 100%;
+    object-fit: cover;
     height: 100%;
 }
 
@@ -797,7 +804,70 @@ ul {
     background: rgba(237, 241, 242, 1);
 }
 
-#footer .footer-wrapper {
+.pagination {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 64px;
+}
+
+.pagination li {
+    line-height: 25px;
+    display: inline-block;
+    padding: 2px;
+    border-top: 1px rgba(57, 62, 79, 0.15) solid;
+    border-bottom: 1px rgba(57, 62, 79, 0.15) solid;
+    border-left: 1px rgba(57, 62, 79, 0.15) solid;
+}
+
+.pagination li:last-child {
+    border-right: 1px rgba(57, 62, 79, 0.15) solid;
+}
+
+.pagination a {
+    font-size: 14px;
+    display: block;
+    color: rgb(44, 121, 179);
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.pagination a span {
+    font-size: 8px;
+}
+
+.pagination li:hover:not(.select) {
+    background: lightgray;
+}
+
+.pagination .select{
+    background:rgb(44, 121, 179);
+    color: white;
+}
+
+.pagination .select a{
+    color: white;
+}
+
+@media (min-width: 1750px) {
+    .pag-max-width {
+        max-width: 1350px;
+    }
+
+    .container .main-page {
+        width: 1150px;
+    }
+
+    .card-big-article .img {
+        height: 250px;
+    }
+
+    .card-small-article .img {
+        width: 25%;
+    }
+
+    .card-small-article .text {
+        width: 75%;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -818,21 +888,21 @@ ul {
         height: auto;
     }
 
-    .card-small-article img {
-        height: auto;
-    }
-
     .card-small-article .img {
         width: 100%;
-        height: 180px;
         float: none;
         overflow: hidden;
     }
 
+    .card-small-article .img,
+    .card-big-article .img {
+        height: 180px;
+    }
+
     .card-small-article .text {
         width: 100%;
+        padding: 20px 28px;
         float: none;
-
     }
 }
 
@@ -850,9 +920,6 @@ ul {
         width: 540px;
     }
 
-    /*.glide-right {*/
-    /*display: none;*/
-    /*}*/
 }
 
 @media (max-width: 768px) {
