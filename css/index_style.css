@@ -61,6 +61,10 @@ ul {
     display: none;
 }
 
+.border-normal {
+    border: 1px rgba(57, 62, 79, 0.15) solid;
+}
+
 .pag-max-width {
     max-width: 1170px;
     min-width: 320px;
@@ -646,7 +650,7 @@ ul {
     margin: 20px 20px 0px 20px;
     padding: 8px 16px;
     background: white;
-    height: 32px;
+    height: 25px;
     border: 1px solid rgba(57, 62, 79, 0.12);
     border-radius: 3px;
     font-size: 14px;
@@ -654,15 +658,15 @@ ul {
 
 .breadcrumb li span {
     display: inline-block;
-    line-height: 32px;
-    height: 32px;
+    line-height: 25px;
+    height: 25px;
     margin-right: 4px;
 }
 
 .breadcrumb li {
     color: grey;
-    line-height: 32px;
-    height: 32px;
+    line-height: 25px;
+    height: 25px;
     display: inline-block;
     float: left;
 }
@@ -696,16 +700,16 @@ ul {
     width: 100%;
     border-radius: 3px;
     background: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.card-big-article img {
+.card-big-article > .img > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card-big-article .img {
+.card-big-article > .img {
     padding: 1px;
     width: 100%;
     box-sizing: border-box;
@@ -714,13 +718,13 @@ ul {
     cursor: pointer;
 }
 
-.card-big-article .text {
+.card-big-article > .text {
     padding: 20px 28px;
     box-sizing: border-box;
 }
 
-.card-big-article .text h2,
-.card-small-article .text h2 {
+.card-big-article > .text .article-title,
+.card-small-article > .text .article-title {
     font-size: 30px;
     color: #58666e;
     cursor: pointer;
@@ -766,7 +770,7 @@ ul {
     box-sizing: border-box;
 }
 
-.card-small-article img {
+.card-small-article > .img > img {
     width: 100%;
     object-fit: cover;
     height: 100%;
@@ -792,6 +796,12 @@ ul {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.card-small-article .text .article-title a,
+.card-big-article .text .article-title a {
+    text-decoration: none;
+    color: #000;
+}
+
 #footer {
     position: absolute;
     right: 0;
@@ -804,6 +814,16 @@ ul {
     background: rgba(237, 241, 242, 1);
 }
 
+.text .article-footer {
+    padding: 28px 0;
+}
+
+.text .article-footer .item-1 {
+    font-size: 12px;
+    color: lightgray;
+}
+
+/*分页开始*/
 .pagination {
     text-align: center;
     font-size: 0;
@@ -839,14 +859,148 @@ ul {
     background: lightgray;
 }
 
-.pagination .select{
-    background:rgb(44, 121, 179);
+.pagination .select {
+    background: rgb(44, 121, 179);
     color: white;
 }
 
-.pagination .select a{
+.pagination .select a {
     color: white;
 }
+
+/*分页结束*/
+
+/*页面导航开始*/
+.page-nav {
+    padding: 0 20px 60px 20px;
+}
+
+.page-nav .prev, .page-nav .next {
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 30px;
+    background: white;
+    color: grey;
+}
+
+/*页面导航结束*/
+
+/*评论模块开发*/
+.comment {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.comment .comment-title {
+    font-size: 18px;
+    color: grey;
+}
+
+.comment .comment-item-group {
+    display: inline-block;
+    box-sizing: border-box;
+
+}
+
+.comment-item-content {
+    width: 100%;
+}
+
+.comment .comment-item-group label {
+    display: block;
+    font-size: 14px;
+    color: grey;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+.comment .comment-item-group textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+    outline: none;
+    padding: 5px 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: black;
+}
+
+.content .comment-item-group input {
+    padding: 0px 12px;
+    line-height: 36px;
+    box-sizing: border-box;
+    height: 36px;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+#visitor-info {
+    margin-left: -10px;
+    margin-right: -10px;
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+.commit-item-name,
+.commit-item-mail,
+.commit-item-url {
+    width: 33.333%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers*/
+    color: lightgray;
+    opacity: 1;
+}
+
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18*/
+    color: lightgray;
+    opacity: 1;
+
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+*/
+    color: lightgray;
+    opacity: 1;
+
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10+*/
+    color: lightgray;
+    opacity: 1;
+}
+
+.comment .comment-item-group input:focus,
+.comment .comment-item-group input:active,
+.comment .comment-item-group textarea:focus,
+.comment .comment-item-group textarea:active {
+    border: 1px solid #66afe9;
+}
+
+
+
+.requested {
+    color: red;
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+.comment .comment-submit{
+    color: white;
+    background: rgba(5,184,83,1);
+    margin-top: 20px;
+    padding: 8px 24px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+/*评论模块结束*/
 
 @media (min-width: 1750px) {
     .pag-max-width {
@@ -879,8 +1033,8 @@ ul {
         width: 750px;
     }
 
-    .card-big-article .text h2,
-    .card-small-article .text h2 {
+    .card-big-article .text .article-title,
+    .card-small-article .text .article-title {
         font-size: 25px;
     }
 
@@ -920,6 +1074,14 @@ ul {
         width: 540px;
     }
 
+    .commit-item-name,
+    .commit-item-mail {
+        width: 50%;
+    }
+
+    .commit-item-url {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -952,6 +1114,12 @@ ul {
     .card-small-article .img,
     .card-big-article .img {
         height: 150px;
+    }
+
+    .commit-item-name,
+    .commit-item-mail,
+    .commit-item-url {
+        width: 100%;
     }
 }
 
