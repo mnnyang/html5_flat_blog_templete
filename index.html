@@ -33,20 +33,47 @@
                 </div>
             </div>
 
-            <div class="login click-state float-right">
+            <div id="setting_button" class="menu-icon setting click-state float-right">
+                <span class="fa fa-cog"></span>
+            </div>
+
+            <div class="login click-state float-right hide-max-768">
                 <span class=" login-text">登录</span>
-                <span class=" login-icon fa fa-sort-desc"></span>
+                <span class="login-icon fa fa-sort-desc"></span>
             </div>
 
 
-            <div class="click-state float-right hide-max-991">
-                <span class="menu-icon news fa fa-hacker-news"></span>
+            <div class="menu-icon news click-state float-right hide-max-991">
+                <span class="  fa fa-hacker-news"></span>
             </div>
 
-            <div class="click-state float-right hide-max-991">
-                <span class="menu-icon music fa fa-music"></span>
+            <div class="menu-icon music click-state float-right hide-max-991">
+                <span class="fa fa-music"></span>
             </div>
 
+        </div>
+
+        <div class="header-mobile-menu">
+            <div class="header-menu-item search-item">
+                <div class="search">
+                    <input type="text" placeholder="输入关键字搜索..">
+                    <span class="fa fa-search"></span>
+                </div>
+            </div>
+
+            <div class="click-state header-menu-item">
+                <div class="notice">
+                    <span class="login-icon fa fa-envelope-open-o"></span>
+                    <span class=" login-text">闲言碎语</span>
+                </div>
+            </div>
+
+            <div class="click-state header-menu-item">
+                <div class="login">
+                    <span class=" login-text">登录</span>
+                    <span class="login-icon fa fa-sort-desc"></span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -163,6 +190,17 @@
                         <div class="desc">网站的一下描述而已。</div>
                     </div>
 
+                    <div class="breadcrumb">
+                        <ul>
+                            <li>
+                                <span class="fa fa-home"></span>
+                                <a href="#">首页</a>
+                            </li>
+                            <li>程序设计</li>
+                        </ul>
+                    </div>
+
+
                     <div class="middle-list">
                         <div class="card-big-article">
 
@@ -277,7 +315,6 @@
                                     <span class="comment">12条评论</span>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -398,102 +435,24 @@
                     </div>
                 </div>
             </div>
+
+            <footer id="footer">
+                <div class="footer-wrapper">
+                    <div class="float-left">© 2018 Copyright xxyangyoulin</div>
+                    <div class="float-right">
+                        京ICP备xxxxxxxx号
+                    </div>
+                </div>
+            </footer>
+
         </div>
+
     </div>
 
 
 </div>
 
 <script src="js/jquery-2.1.1.min.js"></script>
-<script>
-
-    function initTab(selectedId = 0) {
-        var tab = $('#tab');
-        var tabTitles = tab.find('.tab-title-item');
-        var tabContents = tab.find('.tab-content-item');
-
-        for (var i = 0; i < tabTitles.length; i++) {
-
-            tabTitles[i].id = i;
-            $(tabTitles[i]).on('click', function () {
-
-                var $this = $(this);
-                tabTitles.removeClass('select');
-                $this.addClass('select');
-
-                tabContents.removeClass('select').hide();
-                $(tabContents[this.id]).addClass('select').show();
-
-                updateDirTop();
-
-            });
-
-            //set default selected
-            $(tabContents[selectedId]).show();
-        }
-
-    }
-
-    function initSidebar() {
-        var sidebar = $('#sidebar');
-        var menu_item = sidebar.find('.menu-item');
-
-        menu_item.on('click', function () {
-
-            var $this = $(this);
-            $this.next().slideToggle(1);
-            $this.toggleClass('open');
-
-            sidebar.find('.sub-menu').not($this.next()).slideUp(1).prev().removeClass('open');
-        });
-
-        sidebar.find('.open').next().show();
-    }
-
-
-    var defaultDirTop = 0;
-
-    function updateDirTop() {
-        if (undefined !== $('.select .directory').offset()) {
-            defaultDirTop = $('.select .directory').offset().top;
-            console.log("------>" + defaultDirTop)
-        }
-    }
-
-    function initDirectoryFixed() {
-
-        updateDirTop();
-
-        $(window).scroll(function () {
-            var dir = $('.select .directory');
-
-            if (null == dir) {
-                return;
-            }
-
-            var st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
-
-            if (st + 50 > defaultDirTop) {
-                if (dir.css('position') !== 'fixed') {
-                    dir.css('position', 'fixed').css('top', '64px');
-                    console.log("fixed")
-                }
-            } else {
-                if (dir.css('position') !== 'relative') {
-                    dir.css('position', 'relative').css('top', '0px').css('width', '209px');
-                    console.log("relative")
-                }
-            }
-        });
-    }
-
-    $(function () {
-        initSidebar();
-        initTab();
-
-        initDirectoryFixed();
-    });
-
-</script>
+<script src="js/index_js.js"></script>
 </body>
 </html>
