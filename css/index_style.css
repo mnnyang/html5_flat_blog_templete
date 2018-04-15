@@ -57,9 +57,30 @@ ul {
     height: 0;
 }
 
+.hide{
+    display: none;
+}
+
 .pag-max-width {
     max-width: 1170px;
     min-width: 320px;
+}
+
+.go-to-top {
+    padding: 10px;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(255,255,255,0.8);
+    top: 150px;
+    right: 0;
+    outline: none;
+    cursor: pointer;
+    border: none;
+
+}
+
+.go-to-top span{
+    font-size: 14px;
 }
 
 .content {
@@ -554,7 +575,7 @@ ul {
 #tab .tab-content-item .directory {
     /*position: fixed;*/
     /*top: 58px;*/
-    /*background: white;*/
+    background: white;
     /*padding-bottom: 60px;*/
     position: relative;
     width: 209px;
@@ -658,7 +679,6 @@ ul {
 .breadcrumb li:first-child:before {
     content: '';
 }
-
 
 .breadcrumb a {
     text-decoration: none;

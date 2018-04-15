@@ -93,6 +93,13 @@ function initSettingButton() {
     });
 }
 
+
+function initGoToTop() {
+    $('#go_to_top').on('click', function () {
+        $("body,html").animate({scrollTop: 0}, 500);
+    });
+}
+
 $(window).resize(function () {
     updateDirTop();
     hideMobileMenu();
@@ -106,4 +113,6 @@ $(function () {
     initDirectoryFixed();
 
     initSettingButton();
+
+    initGoToTop();
 });
