@@ -565,14 +565,18 @@ ul {
     margin-top: 10px;
 }
 
+/*不指定高度会导致 流式布局错乱*/
 #tab .tab-content-item .tag li {
     float: left;
-    border-radius: 4px;
+    border-radius: 3px;
+    display: block;
+    line-height: 24px;
+    height: 24px;
+    padding: 0 8px;
     margin-right: 3px;
     margin-bottom: 8px;
     background: rgba(0, 183, 226, 1);
     color: rgba(255, 255, 255, 0.9);
-    padding: 2px 8px;
     letter-spacing: 1px;
     font-size: 12px;
     cursor: pointer;
