@@ -193,4 +193,12 @@ $(function () {
     initGoToTop();
 });
 
+/**
+ * 重新打开页面进入网站
+ * @param url
+ */
+function goToUrlByNewPage(url = "#") {
+    window.open(url);
+}
+
 

@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="css/font-awesome.css">
 
 </head>
-<body>
+<body onscroll="onPageScroll()">
 
 <button class="go-to-top" id="go_to_top">
     <span class="fa fa-chevron-up"></span>
 </button>
 
 <div class="content pag-max-width">
-    <div class="header pag-max-width">
+    <header class="header pag-max-width">
         <div class="header-menu">
             <div class="site float-left">
                 <span class=" site-icon fa fa-book"></span>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="container">
         <div class="glide-left float-left" `>
@@ -123,7 +123,7 @@
                             <li>
                                 <div class="menu-item click-state">
                                     <span class="menu-icon fa fa-envelope-open"></span>
-                                    <span class="menu-title">菜单一</span>
+                                    <span class="menu-title">分类</span>
                                     <span class="menu-ind fa fa-chevron-right"></span>
                                 </div>
                                 <ul class="sub-menu">
@@ -136,11 +136,11 @@
                             <li>
                                 <div class="menu-item click-state">
                                     <span class="menu-icon fa fa-envelope-open"></span>
-                                    <span class="menu-title">菜单一</span>
+                                    <span class="menu-title">模块</span>
                                     <span class="menu-ind fa fa-chevron-right"></span>
                                 </div>
                                 <ul class="sub-menu">
-                                    <li><a class="spec-menu-item" href="index.html">子菜单一</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">飞机云</a></li>
                                     <li><a class="spec-menu-item" href="#">子菜单二</a></li>
                                     <li><a class="spec-menu-item" href="#">子菜单三</a></li>
                                     <li><a class="spec-menu-item" href="#">子菜单三</a></li>
@@ -207,10 +207,9 @@
                     </ul>
                 </div>
 
-
                 <div class="middle-list">
                     <div class="card-big-article">
-                        <div class="img">
+                        <div class="img" onclick="window.open('article.html', '_self'); ">
                             <img src="images/blank-colors-desk-370474.jpg">
                         </div>
                         <div class="text">
@@ -226,7 +225,7 @@
                                 <span class="date">2018年04月08日</span>
 
                                 <span class="fa fa-comment"></span>
-                                <span class="comment">12条评论</span>
+                                <span class="comment-count">12条评论</span>
                             </div>
                         </div>
                     </div>
@@ -248,7 +247,7 @@
                                 <span class="date">2018 年 04 月 08 日</span>
 
                                 <span class="fa fa-comment"></span>
-                                <span class="comment">12条评论</span>
+                                <span class="comment-count">12条评论</span>
                             </div>
                         </div>
 
@@ -270,7 +269,7 @@
                                 <span class="date">2018 年 04 月 08 日</span>
 
                                 <span class="fa fa-comment"></span>
-                                <span class="comment">12条评论</span>
+                                <span class="comment-count">12条评论</span>
                             </div>
                         </div>
 
@@ -295,7 +294,7 @@
                                 <span class="date">2018 年 04 月 08 日</span>
 
                                 <span class="fa fa-comment"></span>
-                                <span class="comment">12条评论</span>
+                                <span class="comment-count">12条评论</span>
                             </div>
                         </div>
 
@@ -319,7 +318,7 @@
                                 <span class="date">2018 年 04 月 08 日</span>
 
                                 <span class="fa fa-comment"></span>
-                                <span class="comment">12条评论</span>
+                                <span class="comment-count">12条评论</span>
                             </div>
                         </div>
 
@@ -393,7 +392,7 @@
                                 <div style="clear:both;"></div>
                             </div>
 
-                            <div class="directory" id="directory">
+                            <!--<div class="directory" id="directory">
                                 <h2>目录</h2>
                                 <ul class="directory-list">
                                     <li class="directory-item click-state"><span class="directory-title">程序设计</span>
@@ -403,10 +402,10 @@
                                     <li class="directory-item click-state"><span class="directory-title">程序设计</span>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="tab-content-item">
-                            <div class="directory">
+                            <!--<div class="directory">
                                 <h2>目录</h2>
                                 <ul class="directory-list">
                                     <li class="directory-item click-state"><span class="directory-title">程序设计</span>
@@ -414,10 +413,10 @@
                                     <li class="directory-item click-state"><span class="directory-title">程序设计</span>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="tab-content-item">
-                            <div class="directory">
+                            <!--<div class="directory">
                                 <h2>目录</h2>
                                 <ul class="directory-list">
                                     <li class="directory-item click-state"><span class="directory-title">大标题1</span>
@@ -425,7 +424,7 @@
                                     <li class="directory-item click-state"><span class="directory-title">程序设计</span>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>

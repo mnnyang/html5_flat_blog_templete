@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>道德经 | xxyangyoulin's Blog</title>
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+</head>
+<body onscroll="onPageScroll()">
+
+<button class="go-to-top" id="go_to_top">
+    <span class="fa fa-chevron-up"></span>
+</button>
+
+<div class="content pag-max-width">
+    <header class="header pag-max-width">
+        <div class="header-menu">
+            <div class="site float-left">
+                <span class=" site-icon fa fa-book"></span>
+                <span class="site-title">yyl's Blog</span>
+            </div>
+            <div class="menu-icon float-left hide-max-768">
+                <span class="fold fa fa-sliders"></span>
+            </div>
+            <div class="menu-icon float-left hide-max-768">
+                <span class="user fa fa-user-o"></span>
+
+            </div>
+
+
+            <div class="search-box hide-max-768">
+                <div class="search" style="">
+                    <input type="text" placeholder="输入关键字搜索..">
+                    <span class="fa fa-search"></span>
+                </div>
+            </div>
+
+            <div id="setting_button" class="menu-icon setting click-state float-right">
+                <span class="fa fa-cog"></span>
+            </div>
+
+            <div id="bars_button" class="menu-icon bars click-state float-right">
+                <span class="fa fa-bars"></span>
+            </div>
+
+            <div class="login click-state float-right hide-max-768">
+                <span class=" login-text">登录</span>
+                <span class="login-icon fa fa-sort-desc"></span>
+            </div>
+
+
+            <div class="menu-icon news click-state float-right hide-max-991">
+                <span class="  fa fa-hacker-news"></span>
+            </div>
+
+            <div class="menu-icon music click-state float-right hide-max-991">
+                <span class="fa fa-music"></span>
+            </div>
+
+        </div>
+
+        <div class="header-mobile-menu">
+            <div class="header-menu-item search-item">
+                <div class="search">
+                    <input type="text" placeholder="输入关键字搜索..">
+                    <span class="fa fa-search"></span>
+                </div>
+            </div>
+
+            <div class="click-state header-menu-item">
+                <div class="notice">
+                    <span class="login-icon fa fa-envelope-open-o"></span>
+                    <span class=" login-text">闲言碎语</span>
+                </div>
+            </div>
+
+            <div class="click-state header-menu-item">
+                <div class="login">
+                    <span class=" login-text">登录</span>
+                    <span class="login-icon fa fa-sort-desc"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="glide-left float-left">
+            <div class="glide-left-scroll">
+                <div class="avatar-box">
+                    <img src="./images/avatar.jpg">
+                    <div class="name">
+                        xxyyl
+                        <div class=" fa fa-sort-desc">
+
+                        </div>
+
+                    </div>
+                    <div class="desc">A student</div>
+                </div>
+
+                <div class="nav-first">
+                    <div class="nav-title">导航</div>
+                    <ul class="nav-list">
+                        <li class="nav-item click-state">
+                            <span class="nav-icon fa fa-home"></span>
+                            首页
+                        </li>
+                        <li class="nav-item click-state">
+                            <span class="nav-icon fa fa-file-text"></span>
+                            文章
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-second">
+                    <div class="nav-title">分类</div>
+
+                    <div id="sidebar">
+                        <ul>
+                            <li>
+                                <div class="menu-item click-state">
+                                    <span class="menu-icon fa fa-envelope-open"></span>
+                                    <span class="menu-title">分类</span>
+                                    <span class="menu-ind fa fa-chevron-right"></span>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li><a class="spec-menu-item" href="index.html">子菜单一</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单二</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <div class="menu-item click-state">
+                                    <span class="menu-icon fa fa-envelope-open"></span>
+                                    <span class="menu-title">模块</span>
+                                    <span class="menu-ind fa fa-chevron-right"></span>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li><a class="spec-menu-item" href="path.html">飞机云</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单二</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-page">
+            <div class="middle">
+                <div class="middle-big-header">
+
+                    <div class="middle-img-header">
+                        <img class="adaptive-img" src="./images/tablet-1442900_1920.jpg">
+                    </div>
+
+                    <div class="title-info">
+                        <div class="my-dynamic">我的动态</div>
+                    </div>
+
+                    <div class="my-dynamic-list">
+                        <div class="dynamic-wrapper">
+                            <div class="my-dynamic-item">
+                                <div class="my-dynamic-left">
+                                    <div class="img">
+                                        <img class="adaptive-img" src="images/avatar.jpg">
+                                    </div>
+                                </div>
+                                <div class="my-dynamic-right">
+                                    <div class="dynamic-title">
+                                        <span class="author">xxyangyoulin</span>
+                                        <span class="date">1天前</span>
+                                    </div>
+                                    <div class="dynamic-content">
+                                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-dynamic-item">
+                                <div class="my-dynamic-left">
+                                    <div class="img">
+                                        <img class="adaptive-img" src="images/avatar.jpg">
+                                    </div>
+                                </div>
+                                <div class="my-dynamic-right">
+                                    <div class="dynamic-title">
+                                        <span class="author">xxyangyoulin</span>
+                                        <span class="date">1天前</span>
+                                    </div>
+                                    <div class="dynamic-content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                                </div>
+                            </div>
+                            <div class="my-dynamic-item">
+                                <div class="my-dynamic-left">
+                                    <div class="img">
+                                        <img class="adaptive-img" src="images/avatar.jpg">
+                                    </div>
+                                </div>
+                                <div class="my-dynamic-right">
+                                    <div class="dynamic-title">
+                                        <span class="author">xxyangyoulin</span>
+                                        <span class="date">1天前</span>
+                                    </div>
+                                    <div class="dynamic-content">
+                                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-dynamic-item">
+                                <div class="my-dynamic-left">
+                                    <div class="img">
+                                        <img class="adaptive-img" src="images/avatar.jpg">
+                                    </div>
+                                </div>
+                                <div class="my-dynamic-right">
+                                    <div class="dynamic-title">
+                                        <span class="author">xxyangyoulin</span>
+                                        <span class="date">1天前</span>
+                                    </div>
+                                    <div class="dynamic-content">内容内容内容内容内容内容内容内容内容内容内容内容</div>
+                                </div>
+                            </div>
+
+                            <div class="my-dynamic-footer">
+                                <img class="adaptive-img" src="images/circle.svg"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination pagination-path">
+                        <ul>
+                            <li class="prev"><a href="#"><span class="fa fa-chevron-left"></span></a></li>
+                            <li class="select"><a href="#">1</a></li>
+                            <li class=""><a href="#">2</a></li>
+                            <li class=""><a href="#">3</a></li>
+                            <li class=""><a href="#">4</a></li>
+                            <li class=""><a href="#">5</a></li>
+                            <li class="prev"><a href="#"><span class="fa fa-chevron-right"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glide-right hide-max-991">
+                <div class="contact-wrapper">
+                    <div class="title">联系方式</div>
+                    <ul class="contact-list">
+                        <li onclick="goToUrlByNewPage()">
+                            <div class="img">
+                                <img class="adaptive-img"
+                                     src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=558034957,1683936361&fm=27&gp=0.jpg">
+                            </div>
+
+                            <div class="right">
+                                <div class="contact-name">QQ</div>
+                                <div class="contact">776310072</div>
+                            </div>
+                        </li>
+
+
+                        <li onclick="goToUrlByNewPage('https://weibo.com/2697157814/profile?topnav=1&wvr=6')">
+                            <div class="img">
+                                <img class="adaptive-img"
+                                     src="https://ww4.sinaimg.cn/large/a15b4afegy1fg2pofbz5fj201s01swe9">
+                            </div>
+
+                            <div class="right">
+                                <div class="contact-name">微博</div>
+                                <div class="contact">@xxyangyoulin</div>
+                            </div>
+                        </li>
+
+                        <li onclick="goToUrlByNewPage('https://www.jianshu.com/u/07c82148bfa4')">
+                            <div class="img">
+                                <img class="adaptive-img"
+                                     src="https://cdn2.jianshu.io/assets/web/nav-logo-4c7bbafe27adc892f3046e6978459bac.png">
+                            </div>
+
+                            <div class="right">
+                                <div class="contact-name">简书</div>
+                                <div class="contact">@xxyangyoulin</div>
+                            </div>
+                        </li>
+                        <li onclick="goToUrlByNewPage('http://music.163.com/m/user/home?id=276328009')">
+                            <div class="img">
+                                <img class="adaptive-img" src="http://www.onlinedown.net/zt/migu/img/wyyy.png">
+                            </div>
+
+                            <div class="right">
+                                <div class="contact-name">网易云音乐</div>
+                                <div class="contact">@同学一场</div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+            <footer id="footer">
+                <div class="footer-wrapper">
+                    <div class="float-left">© 2018 Copyright xxyangyoulin</div>
+                    <div class="float-right">
+                        京ICP备xxxxxxxx号 | created by WebStorm
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/index_js.js"></script>
+</body>
+</html>
