@@ -8,6 +8,8 @@ function initTab(selectedId = 0) {
         tabTitles[i].id = i;
         $(tabTitles[i]).on('click', function () {
 
+            console.log("fff");
+
             var $this = $(this);
             tabTitles.removeClass('select');
             $this.addClass('select');
@@ -26,6 +28,7 @@ function initTab(selectedId = 0) {
 }
 
 function initSidebar() {
+    console.log("ok");
     var sidebar = $('#sidebar');
     var menu_item = sidebar.find('.menu-item');
 
@@ -93,17 +96,88 @@ function initSettingButton() {
     });
 }
 
+function initLeftGlideButton() {
+    $('#bars_button').on('click', function () {
+        if ($('.main-page').css('marginLeft') == '200px') {
+
+            $('.main-page').animate({marginLeft: 0}, 300, function () {
+            });
+        } else {
+            $('.main-page').animate({marginLeft: '200px'}, 300, function () {
+            });
+        }
+    });
+}
+
+function animCloseLeftGlide() {
+    if ($('.main-page').is(':animated')) {
+        return;
+    }
+    $('.main-page').animate({marginLeft: 0}, 100);
+}
+
+function animOpenLeftGlide() {
+    if ($('.main-page').is(':animated')) {
+        return;
+    }
+
+    $('.main-page').animate({marginLeft: '200px'}, 100, function () {
+    });
+}
+
+function initLeftGlideState() {
+    var result = window.matchMedia('(max-width: 768px)');
+
+    if (result.matches) {
+        console.log('页面宽度小于等于768px');
+        $('.main-page').css('marginLeft', 0);
+
+    } else {
+        console.log('页面宽度大于768px');
+        animOpenLeftGlide();
+    }
+}
 
 function initGoToTop() {
     $('#go_to_top').on('click', function () {
         $("body,html").animate({scrollTop: 0}, 500);
     });
+
+    updateGoToTopState();
 }
 
+function updateGoToTopState() {
+    if (window.scrollY > 150) {
+        if ($('#go_to_top').css('display') == 'none') {
+            $('#go_to_top').show();
+            $('#go_to_top').animate({right: 0}, 150,);
+        }
+    } else {
+        if ($('#go_to_top').css('display') != 'none') {
+            $('#go_to_top').animate({right: '-100px'}, 150, function () {
+                $('#go_to_top').hide();
+            });
+        }
+    }
+}
+
+/**
+ * 页面滑动
+ */
+function onPageScroll() {
+    console.log(window.scrollY);
+    updateGoToTopState();
+}
+
+/**
+ * 页面resize
+ */
 $(window).resize(function () {
     updateDirTop();
     hideMobileMenu();
-}).resize();
+
+    initLeftGlideState();
+});
 
 
 $(function () {
@@ -113,6 +187,8 @@ $(function () {
     initDirectoryFixed();
 
     initSettingButton();
+    initLeftGlideButton();
+    initLeftGlideState();
 
     initGoToTop();
 });
