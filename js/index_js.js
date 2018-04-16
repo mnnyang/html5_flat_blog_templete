@@ -200,5 +200,12 @@ $(function () {
 function goToUrlByNewPage(url = "#") {
     window.open(url);
 }
+/**
+ * 重新打开页面进入网站
+ * @param url
+ */
+function goToUrlByCurrentPage(url = "#") {
+    window.open(url,'_self');
+}
 
 

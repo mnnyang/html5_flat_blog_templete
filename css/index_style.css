@@ -1190,12 +1190,14 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 
 .middle .my-dynamic-item .my-dynamic-right .dynamic-content {
     margin-top: 5px;
+    line-height: 30px;
 }
 
 .middle .my-dynamic-list .my-dynamic-item .img {
     width: 40px;
     height: 40px;
     border-radius: 30px;
+
     overflow: hidden;
 }
 
@@ -1251,7 +1253,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 }
 
 .contact-list .right .contact {
-    font-size: 10px;
+    font-size: 12px;
     color: gray;
 }
 
