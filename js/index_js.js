@@ -192,7 +192,6 @@ function initTimeLineColor() {
  * 页面滑动
  */
 function onPageScroll() {
-    console.log(window.scrollY);
     updateGoToTopState();
 }
 

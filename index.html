@@ -87,7 +87,7 @@
     </header>
 
     <div class="container">
-        <div class="glide-left float-left" `>
+        <div class="glide-left float-left">
             <div class="glide-left-scroll">
                 <div class="avatar-box">
                     <img src="./images/avatar.jpg">
@@ -104,49 +104,46 @@
                 <div class="nav-first">
                     <div class="nav-title">导航</div>
                     <ul class="nav-list">
-                        <li class="nav-item click-state">
+                        <li class="nav-item click-state" onclick="goToUrlByCurrentPage('index.html')">
                             <span class="nav-icon fa fa-home"></span>
                             首页
                         </li>
-                        <li class="nav-item click-state">
-                            <span class="nav-icon fa fa-file-text"></span>
-                            文章
+                        <li class="nav-item click-state" onclick="goToUrlByNewPage('https://github.com/mnnyang')">
+                            <span class="nav-icon fa fa-github-alt"></span>
+                            GitHub
                         </li>
                     </ul>
                 </div>
 
                 <div class="nav-second">
-                    <div class="nav-title">分类</div>
+                    <div class="nav-title">模块</div>
 
                     <div id="sidebar">
                         <ul>
                             <li>
                                 <div class="menu-item click-state">
-                                    <span class="menu-icon fa fa-envelope-open"></span>
+                                    <span class="menu-icon fa fa-file-text"></span>
                                     <span class="menu-title">分类</span>
                                     <span class="menu-ind fa fa-chevron-right"></span>
                                 </div>
                                 <ul class="sub-menu">
-                                    <li><a class="spec-menu-item" href="index.html">子菜单一</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单二</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">四个分类</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">四个分类</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">四个分类</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">四个分类</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <div class="menu-item click-state">
-                                    <span class="menu-icon fa fa-envelope-open"></span>
+                                    <span class="menu-icon fa fa-th-large"></span>
                                     <span class="menu-title">模块</span>
                                     <span class="menu-ind fa fa-chevron-right"></span>
                                 </div>
                                 <ul class="sub-menu">
+                                    <li><a class="spec-menu-item" href="archives.html">归档页</a></li>
                                     <li><a class="spec-menu-item" href="path.html">飞机云</a></li>
                                     <li><a class="spec-menu-item" href="404.html">404</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
 
                                 </ul>
                             </li>
@@ -164,12 +161,12 @@
                 </div>
 
                 <!--<div class="breadcrumb">-->
-                    <!--<ul>-->
-                        <!--<li>-->
-                            <!--<a href="#"><span class="fa fa-home"></span>首页</a>-->
-                        <!--</li>-->
-                        <!--<li>程序设计</li>-->
-                    <!--</ul>-->
+                <!--<ul>-->
+                <!--<li>-->
+                <!--<a href="#"><span class="fa fa-home"></span>首页</a>-->
+                <!--</li>-->
+                <!--<li>程序设计</li>-->
+                <!--</ul>-->
                 <!--</div>-->
 
                 <div class="middle-list">

@@ -5,8 +5,25 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>道德经 | xxyangyoulin's Blog</title>
+
+    <!--custom style-->
     <link rel="stylesheet" href="css/style.css">
+
+    <!--font icon-->
     <link rel="stylesheet" href="css/font-awesome.css">
+
+    <!--height light style-->
+    <!--<link rel="stylesheet" href="css/styles/androidstudio.css">-->
+    <link rel="stylesheet" href="css/styles/agate.css">
+
+    <!--height light js-->
+    <script src="js/highlight.pack.js"></script>
+
+    <!--marked-->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!--height light init-->
+    <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 <body onscroll="onPageScroll()">
@@ -104,85 +121,47 @@
                 <div class="nav-first">
                     <div class="nav-title">导航</div>
                     <ul class="nav-list">
-                        <li class="nav-item click-state">
+                        <li class="nav-item click-state" onclick="goToUrlByCurrentPage('index.html')">
                             <span class="nav-icon fa fa-home"></span>
                             首页
                         </li>
-                        <li class="nav-item click-state">
-                            <span class="nav-icon fa fa-file-text"></span>
-                            文章
+                        <li class="nav-item click-state" onclick="goToUrlByNewPage('https://github.com/mnnyang')">
+                            <span class="nav-icon fa fa-github-alt"></span>
+                            GitHub
                         </li>
                     </ul>
                 </div>
 
                 <div class="nav-second">
-                    <div class="nav-title">分类</div>
+                    <div class="nav-title">模块</div>
 
                     <div id="sidebar">
                         <ul>
                             <li>
                                 <div class="menu-item click-state">
-                                    <span class="menu-icon fa fa-envelope-open"></span>
+                                    <span class="menu-icon fa fa-file-text"></span>
                                     <span class="menu-title">分类</span>
                                     <span class="menu-ind fa fa-chevron-right"></span>
                                 </div>
                                 <ul class="sub-menu">
-                                    <li><a class="spec-menu-item" href="index.html">子菜单一</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单二</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">四个分类</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">四个分类</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">四个分类</a></li>
+                                    <li><a class="spec-menu-item" href="path.html">四个分类</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <div class="menu-item click-state">
-                                    <span class="menu-icon fa fa-envelope-open"></span>
+                                    <span class="menu-icon fa fa-th-large"></span>
                                     <span class="menu-title">模块</span>
                                     <span class="menu-ind fa fa-chevron-right"></span>
                                 </div>
                                 <ul class="sub-menu">
+                                    <li><a class="spec-menu-item" href="archives.html">归档页</a></li>
                                     <li><a class="spec-menu-item" href="path.html">飞机云</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单二</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
-                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="404.html">404</a></li>
+
                                 </ul>
                             </li>
                         </ul>
@@ -212,160 +191,7 @@
                         <div class="img">
                             <img src="images/blank-colors-desk-370474.jpg">
                         </div>
-                        <div class="text">
-
-                            <h2>01.道可道，非常道。</h2><br>名可名，非常名。<br>无名天地之始。<br>有名万物之母。<br>故常无欲以观其妙。<br>常有欲以观
-
-                            其徼。<br>此两者同出而异名，同谓之玄。<br>玄之又玄，众妙之门。<br>
-
-
-                            02.天下皆知美之为美，斯恶矣；皆知善之为善，斯不善已。<br>故有无相生，难易相成，长短相形，高下相
-
-                            倾，音声相和，前後相随。<br>是以圣人处无为之事，行不言之教。<br>万物作焉而不辞。<br>生而不有，为而不恃，
-
-                            功成而弗居。<br>夫唯弗居，是以不去。<br>
-
-
-                            03.不尚贤， 使民不争。<br>不贵难得之货，使民不为盗。<br>不见可欲，使民心不乱。<br>是以圣人之治，虚其心，
-
-                            实其腹，弱其志，强其骨；常使民无知、无欲，使夫智者不敢为也。<br>为无为，则无不治。<br>
-
-
-                            04.道冲而用之，或不盈。<br>渊兮似万物之宗。<br>解其纷，和其光，同其尘，湛兮似或存。<br>吾不知谁之子，象
-
-                            帝之先。<br>
-
-
-                            05.天地不仁，以万物为刍狗。<br>圣人不仁，以百姓为刍狗。<br>天地之间，其犹橐迭乎？虚而不屈，动而愈出
-
-                            。<br>多言数穷，不如守中。<br>
-
-
-                            06.谷神不死是谓玄牝。<br>玄牝之门是谓天地根。<br>绵绵若存，用之不勤。<br>
-
-
-                            07.天长地久。<br>天地所以能长且久者，以其不自生，故能长生。<br>是以圣人後其身而身先，外其身而身存。<br>
-
-                            非以其无私邪！故能成其私。<br>
-
-
-                            08.上善若水。<br>水善利万物而不争，处众人之所恶，故几於道。<br>居善地，心善渊，与善仁，言善信，正善
-
-                            治，事善能，动善时。<br>夫唯不争，故无尤。<br>
-
-
-                            09.持而盈之不如其己；揣而锐之不可长保；金玉满堂莫之能守；富贵而骄，自遗其咎。<br>功遂身退，天之
-
-                            道。<br>
-
-
-                            10.载营魄抱一，能无离乎？专气致柔，能如婴儿乎？涤除玄览，能无疵乎？爱国治民，能无为乎？天门
-
-                            开阖，能为雌乎？明白四达，能无知乎。<br>
-
-
-                            11.三十幅共一毂，当其无，有车之用。<br>埏埴以为器，当其无，有器之用。<br>凿户牖以为室，当其无，有室
-
-                            之用。<br>故有之以为利，无之以为用。<br>
-
-
-                            12.五色令人目盲，五音令人耳聋，五味令人口爽，驰骋畋猎令人心发狂，难得之货令人行妨。<br>是以圣人
-
-                            ，为腹不为目，故去彼取此。<br>
-
-
-                            13.宠辱若惊，贵大患若身。<br>何谓宠辱若惊？宠为下。<br>得之若惊失之若惊是谓宠辱若惊。<br>何谓贵大患若身
-
-                            ？吾所以有大患者，为吾有身，及吾无身，吾有何患。<br>故贵以身为天下，若可寄天下。<br>爱以身为天下，若
-
-                            可托天下。<br>
-
-
-                            14.视之不见名曰夷。<br>听之不闻名曰希。<br>抟之不得名曰微。<br>此三者不可致诘，故混而为一。<br>其上不皦
-
-                            (jiǎo)，其下不昧，绳绳不可名，复归於无物。<br>是谓无状之状，无物之象，是谓惚恍。<br>迎之不见其首，随
-
-                            之不见其後。<br>执古之道以御今之有。<br>能知古始，是谓道纪。<br>
-
-
-                            15.古之善为士者，微妙玄通，深不可识。<br>夫唯不可识，故强为之容。<br>豫兮若冬涉川；犹兮若畏四邻；俨
-
-                            兮其若容；涣兮若冰之将释；敦兮其若朴；旷兮其若谷；混兮其若浊；澹兮其若海；飉(liáo,风的声音)兮
-
-                            若无止。<br>孰能浊以静之徐清。<br>孰能安以动之徐生。<br>保此道者不欲盈。<br>夫唯不盈故能蔽而新成。<br>
-
-
-                            16.致虚极守静笃。<br>万物并作，吾以观复。<br>夫物芸芸各复归其根。<br>归根曰静，是谓复命；复命曰常，知常
-
-                            曰明。<br>不知常，妄作凶。<br>知常容，容乃公，公乃全，全乃天，天乃道，道乃久，没身不殆。<br>
-
-
-                            17.太上，下知有之。<br>其次，亲而誉之。<br>其次，畏之。<br>其次，侮之。<br>信不足焉，有不信焉。<br>悠兮其贵言，
-
-                            功成事遂，百姓皆谓∶我自然。<br>
-
-
-                            18.大道废有仁义；慧智出有大伪；六亲不和有孝慈；国家昏乱有忠臣。<br>
-
-
-                            19.绝圣弃智，民利百倍；绝仁弃义，民复孝慈；绝巧弃利，盗贼无有；此三者，以为文不足。<br>故令有所
-
-                            属，见素抱朴少私寡欲。<br>
-
-
-                            71.知不知上，不知知病。<br>夫唯病病，是以不病。<br>圣人不病，以其病病。<br>夫唯病病，是以不病。<br>
-
-
-                            72.民不畏威，则大威至。<br>无狎其所居，无厌其所生。<br>夫唯不厌，是以不厌。<br>是以圣人自知不自见。<br>自爱
-
-                            不自贵。<br>故去彼取此。<br>
-
-
-                            73.勇於敢则杀。<br>勇於不敢则活。<br>此两者或利或害。<br>天之所恶孰知其故。<br>天之道不争而善胜。<br>不言而善应
-
-                            。<br>不召而自来。<br>繟(chǎn,舒缓)然而善谋。<br>天网恢恢疏而不失。<br>
-
-
-                            74.民不畏死，奈何以死惧之。<br>若使民常畏死，而为奇者，吾得执而杀之，孰敢。<br>常有司杀者杀。<br>夫代司
-
-                            杀者杀，是谓代大匠斫。<br>夫代大匠斫者，希有不伤其手矣。<br>
-
-
-                            75.民之饥以其上食税之多，是以饥。<br>民之难治以其上之有为，是以难治。<br>民之轻死以其求生之厚，是以
-
-                            轻死。<br>夫唯无以生为者，是贤於贵生。<br>
-
-
-                            76.人之生也柔弱，其死也坚强。<br>草木之生也柔脆，其死也枯槁。<br>故坚强者死之徒，柔弱者生之徒。<br>是以
-
-                            兵强则灭，木强则折。<br>强大处下，柔弱处上。<br>
-
-
-                            77.天之道其犹张弓与。<br>高者抑之，下者举之。<br>有馀者损之，不足者补之。<br>天之道，损有馀而补不足。<br>人
-
-                            之道，则不然，损不足以奉有馀。<br>孰能有馀以奉天下，唯有道者。<br>是以圣人为而不恃，功成而不处。<br>其不
-
-                            欲见贤邪！
-
-
-                            78.天下莫柔弱於水。<br>而攻坚强者，莫之能胜。<br>以其无以易之。<br>弱之胜强。<br>柔之胜刚。<br>天下莫不知莫能行
-
-                            。<br>是以圣人云，受国之垢是谓社稷主。<br>受国不祥是为天下王。<br>正言若反。<br>
-
-
-                            79.和大怨必有馀怨，安可以为善。<br>是以圣人执左契，而不责於人。<br>有德司契，无德司彻。<br>天道无亲常与
-
-                            善人。<br>
-
-
-                            80.小国寡民。<br>使有什伯之器而不用。<br>使民重死而不远徙。<br>虽有舟舆无所乘之。<br>虽有甲兵无所陈之。<br>使民
-
-                            复结绳而用之。<br>甘其食、美其服、安其居、乐其俗。<br>邻国相望，鸡犬之声相闻。<br>民至老死不相往来。<br>
-
-
-                            81.信言不美。<br>美言不信。<br>善者不辩。<br>辩者不善。<br>知者不博。<br>博者不知。<br>圣人不积。<br>既以为人己愈有。<br>既
-
-                            以与人己愈多。<br>天之道利而不害。<br>圣人之道为而不争。<br>
+                        <div class="text" id="article-content">
 
 
                             <div class="article-footer">
@@ -700,5 +526,81 @@
 
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/index_js.js"></script>
+
+<script>
+
+    $(function () {
+        var markdownString = '## 引入\n' +
+            '\n' +
+            '- 仅仅是一个维护Bean工厂接口。\n' +
+            '\n' +
+            '\n' +
+            '- 在Spring中任何Java类都被当做Bean处理。\n' +
+            '\n' +
+            '- Spring容器实现了IOC和AOP机制，这些机制可以简化Bean创建和解耦。\n' +
+            '\n' +
+            '  - IOC（Inversion of Control）控制反转，是指程序中对象的获取方式发生反转。\n' +
+            '\n' +
+            '    是Spring框架的基础和核心。\n' +
+            '\n' +
+            '- Spring容器有`BeanFactory`和`ApplicationContext`两种。\n' +
+            '\n' +
+            '- DI（Dependency Injection）依赖注入：\n' +
+            '\n' +
+            '  - 原理：将一起工作具有关系的对象，通过构造方法参数或方法参数建立关联，容器的工作就是创建Bean时注入那些依赖关系。\n' +
+            '\n' +
+            '- IOC是一种思想，而DI是实现IOC的主要技术途径\n' +
+            '\n' +
+            '\n' +
+            '<!-- more -->\n' +
+            '\n' +
+            '优点\n' +
+            '\n' +
+            '1. Spring是一个开源的轻量级的应用开发框架，其目的是用于简化企业级应用程序开发，减少侵入；\n' +
+            '2. Spring提供的IoC和AOP应用，可以将组件的耦合度降至最低，即解耦，便于系统日后的维护和升级；\n' +
+            '3. Spring为系统提供了一个整体的解决方案，开发者可以利用它本身提供的功能外，也可以与第三方框架和技术整合应用，可以自由选择采用哪种技术进行开发。\n' +
+            '\n' +
+            '\n' +
+            '\n' +
+            '\n' +
+            '\n' +
+            '\n' +
+            '## 简介\n' +
+            '\n' +
+            '### 入门(idea)\n' +
+            '\n' +
+            '1. 创建Spring项目\n' +
+            '\n' +
+            '2. 创建pring config文件\n' +
+            '\n' +
+            '3. javabean\n' +
+            '\n' +
+            '   ```java\n' +
+            '   public class Hello {\n' +
+            '       private String name;\n' +
+            '\n' +
+            '       public String getName() {\n' +
+            '           return name;\n' +
+            '       }\n' +
+            '\n' +
+            '       public Hello setName(String name) {\n' +
+            '           this.name = name;\n' +
+            '           return this;\n' +
+            '       }\n' +
+            '\n' +
+            '       public void sayHello(){\n' +
+            '           System.out.println("hello "+name);\n' +
+            '       }\n' +
+            '   }\n' +
+            '   ```\n' +
+            '\n' +
+            '4. 配置声明';
+
+
+        document.getElementById('article-content').innerHTML =
+            marked(markdownString);
+    });
+
+</script>
 </body>
 </html>
