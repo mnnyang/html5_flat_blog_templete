@@ -741,8 +741,9 @@ ul {
 .card-small-article > .text .article-title {
     font-size: 30px;
     color: #58666e;
+    font-family: sans-serif;
+    font-weight: 300;
     cursor: pointer;
-    font-weight: normal;
 }
 
 .card-big-article .text .desc,
@@ -750,6 +751,8 @@ ul {
     font-size: 14px;
     letter-spacing: 1px;
     margin-top: 5px;
+    font-family: sans-serif;
+    font-weight: 300;
     color: rgba(120, 132, 138, 1);
     padding-bottom: 12px;
     border-bottom: 1px rgba(57, 62, 79, 0.07) solid;
@@ -759,6 +762,8 @@ ul {
 .card-small-article .text .footer {
     padding: 12px 0;
     font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 300;
     color: rgba(170, 183, 188, 1);
 }
 
@@ -1263,6 +1268,35 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 }
 
 /*大模块页面结束**/
+
+/*归档页开始*/
+.archives-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.archives-wrapper .middle-header {
+    background: rgba(246, 248, 248, 1);
+    padding: 20px;
+    color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px rgba(57, 62, 79, 0.15) solid;
+}
+
+.archives-wrapper .middle-header h1 {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.archives-wrapper .middle-header .desc {
+    font-size: 12px;
+    margin-top: 2px;
+    letter-spacing: 2px;
+    color: rgba(170, 183, 188, 1);
+}
+
+
+
+/*归档页结束*/
 
 @media (min-width: 1750px) {
     .pag-max-width {

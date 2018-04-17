@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>归档 | xxyangyoulin's Blog</title>
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+</head>
+<body onscroll="onPageScroll()">
+
+<button class="go-to-top" id="go_to_top">
+    <span class="fa fa-chevron-up"></span>
+</button>
+
+<div class="content pag-max-width">
+    <header class="header pag-max-width">
+        <div class="header-menu">
+            <div class="site float-left">
+                <span class=" site-icon fa fa-book"></span>
+                <span class="site-title">yyl's Blog</span>
+            </div>
+            <div class="menu-icon float-left hide-max-768">
+                <span class="fold fa fa-sliders"></span>
+            </div>
+            <div class="menu-icon float-left hide-max-768">
+                <span class="user fa fa-user-o"></span>
+
+            </div>
+
+
+            <div class="search-box hide-max-768">
+                <div class="search" style="">
+                    <input type="text" placeholder="输入关键字搜索..">
+                    <span class="fa fa-search"></span>
+                </div>
+            </div>
+
+            <div id="setting_button" class="menu-icon setting click-state float-right">
+                <span class="fa fa-cog"></span>
+            </div>
+
+            <div id="bars_button" class="menu-icon bars click-state float-right">
+                <span class="fa fa-bars"></span>
+            </div>
+
+            <div class="login click-state float-right hide-max-768">
+                <span class=" login-text">登录</span>
+                <span class="login-icon fa fa-sort-desc"></span>
+            </div>
+
+
+            <div class="menu-icon news click-state float-right hide-max-991">
+                <span class="  fa fa-hacker-news"></span>
+            </div>
+
+            <div class="menu-icon music click-state float-right hide-max-991">
+                <span class="fa fa-music"></span>
+            </div>
+
+        </div>
+
+        <div class="header-mobile-menu">
+            <div class="header-menu-item search-item">
+                <div class="search">
+                    <input type="text" placeholder="输入关键字搜索..">
+                    <span class="fa fa-search"></span>
+                </div>
+            </div>
+
+            <div class="click-state header-menu-item">
+                <div class="notice">
+                    <span class="login-icon fa fa-envelope-open-o"></span>
+                    <span class=" login-text">闲言碎语</span>
+                </div>
+            </div>
+
+            <div class="click-state header-menu-item">
+                <div class="login">
+                    <span class=" login-text">登录</span>
+                    <span class="login-icon fa fa-sort-desc"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="glide-left float-left">
+            <div class="glide-left-scroll">
+                <div class="avatar-box">
+                    <img src="./images/avatar.jpg">
+                    <div class="name">
+                        xxyyl
+                        <div class=" fa fa-sort-desc">
+
+                        </div>
+
+                    </div>
+                    <div class="desc">A student</div>
+                </div>
+
+                <div class="nav-first">
+                    <div class="nav-title">导航</div>
+                    <ul class="nav-list">
+                        <li class="nav-item click-state">
+                            <span class="nav-icon fa fa-home"></span>
+                            首页
+                        </li>
+                        <li class="nav-item click-state">
+                            <span class="nav-icon fa fa-file-text"></span>
+                            文章
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-second">
+                    <div class="nav-title">分类</div>
+
+                    <div id="sidebar">
+                        <ul>
+                            <li>
+                                <div class="menu-item click-state">
+                                    <span class="menu-icon fa fa-envelope-open"></span>
+                                    <span class="menu-title">分类</span>
+                                    <span class="menu-ind fa fa-chevron-right"></span>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li><a class="spec-menu-item" href="index.html">子菜单一</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单二</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <div class="menu-item click-state">
+                                    <span class="menu-icon fa fa-envelope-open"></span>
+                                    <span class="menu-title">模块</span>
+                                    <span class="menu-ind fa fa-chevron-right"></span>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li><a class="spec-menu-item" href="path.html">飞机云</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单二</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                    <li><a class="spec-menu-item" href="#">子菜单三</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-page">
+            <div class="archives-wrapper">
+                <div class="middle-header">
+                    <h1>归档</h1>
+                    <div class="desc">共有12篇文章。</div>
+                </div>
+            </div>
+
+
+            <footer id="footer">
+                <div class="footer-wrapper">
+                    <div class="float-left">© 2018 Copyright xxyangyoulin</div>
+                    <div class="float-right">
+                        京ICP备xxxxxxxx号 | created by WebStorm
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/index_js.js"></script>
+</body>
+</html>
