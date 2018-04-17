@@ -21,7 +21,12 @@
     src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url('../fonts/SourceSansPro-Bold.ttf') ;
 }
 
-body, html, ul, li, h1, h2, h3, h4 {
+/*body, html, ul, li, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}*/
+
+body, html, h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
 }
@@ -36,9 +41,9 @@ body {
     height: 100%;
 }
 
-ul {
-    list-style: none;
-}
+/*ul {*/
+/*list-style: none;*/
+/*}*/
 
 .float-left {
     float: left;
@@ -394,8 +399,10 @@ ul {
     color: rgba(57, 62, 79, 0.7);
 }
 
-#sidebar ul {
+#sidebar ul, .nav-first ul {
     list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 #sidebar .menu-item {
@@ -458,6 +465,11 @@ ul {
     float: left;
 }
 
+.glide-right ul {
+    margin: 0;
+    padding: 0;
+}
+
 /************************main-page*/
 .main-page {
     table-layout: fixed;
@@ -492,6 +504,8 @@ ul {
     list-style: none;
     height: 100%;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 #tab .tab-title li {
@@ -674,6 +688,7 @@ ul {
     color: rgba(170, 183, 188, 1);
 }
 
+
 .breadcrumb {
     margin: 20px 20px 0px 20px;
     padding: 8px 16px;
@@ -684,6 +699,11 @@ ul {
     font-size: 14px;
 }
 
+.breadcrumb ul{
+    margin: 0;
+    padding: 0;
+}
+
 .breadcrumb li span {
     display: inline-block;
     line-height: 25px;
@@ -692,11 +712,15 @@ ul {
 }
 
 .breadcrumb li {
+    list-style: none;
+    margin: 0;
     color: grey;
+    padding: 0;
     line-height: 25px;
     height: 25px;
     display: inline-block;
     float: left;
+
 }
 
 .breadcrumb li * {
@@ -868,6 +892,12 @@ ul {
     text-align: center;
     font-size: 0;
     margin-bottom: 0px;
+}
+
+.pagination ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .pagination li {
@@ -1458,7 +1488,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         width: 500px;
     }
 
-    .container .main-big-page ,
+    .container .main-big-page,
     #footer {
         width: 750px;
     }
@@ -1533,7 +1563,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         max-width: 100%;
     }
 
-    #footer{
+    #footer {
         width: 100%;
     }
 
