@@ -162,6 +162,33 @@ function updateGoToTopState() {
 }
 
 /**
+ * 设置时间线的颜色
+ * @param target
+ * @param color
+ */
+
+var colorList = ['#00BCD4', '#000000', '#E91E63','#673AB7','#FFC107', '#4CAF50'];
+
+function initTimeLineColor() {
+    var timeLine = $('#time-line');
+    if (!timeLine[0]) {
+        return;
+    }
+
+    var timeLineItem = timeLine.find('.time-line-item-wrapper');
+    for (var i = 0; i < timeLineItem.length; i++) {
+
+        var $this = $(timeLineItem[i]);
+        var color = colorList[(i) % colorList.length];
+        $this.css('border-color', color);
+        $this.find('.time-line-title').css('background', color);
+        $this.find('.point').css('border-color', color);
+        $this.find('.content-wrapper').css('background', color);
+        $this.find('.corner').css('border-right-color', color);
+    }
+}
+
+/**
  * 页面滑动
  */
 function onPageScroll() {
@@ -191,6 +218,8 @@ $(function () {
     initLeftGlideState();
 
     initGoToTop();
+
+    initTimeLineColor();
 });
 
 /**
@@ -200,12 +229,13 @@ $(function () {
 function goToUrlByNewPage(url = "#") {
     window.open(url);
 }
+
 /**
  * 重新打开页面进入网站
  * @param url
  */
 function goToUrlByCurrentPage(url = "#") {
-    window.open(url,'_self');
+    window.open(url, '_self');
 }
 
 

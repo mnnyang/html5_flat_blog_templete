@@ -52,7 +52,6 @@ body {
     outline: none;
     margin: 15px auto;
     width: 140px;
-    color: white;
     padding: 10px 30px;
     font-size: 14px;
     letter-spacing: 1px;
@@ -61,6 +60,11 @@ body {
     font-family: sans-serif;
     cursor: pointer;
     font-weight: lighter;
+}
+
+.center .go-to a{
+    text-decoration: none;
+    color: white;
 }
 
 .center .go-to:hover,

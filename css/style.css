@@ -1272,7 +1272,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 /*归档页开始*/
 .archives-wrapper {
     height: 100%;
+    display: table-cell;
     width: 100%;
+    vertical-align: top;
+    position: relative;
 }
 
 .archives-wrapper .middle-header {
@@ -1294,7 +1297,111 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
     color: rgba(170, 183, 188, 1);
 }
 
+/*时间轴开始*/
 
+.time-line-wrapper {
+    padding: 20px 20px 20px 20px;
+}
+
+.time-line-wrapper .time-line-item-wrapper {
+    border-left: 4px solid white;
+    box-sizing: border-box;
+    margin-left: 50px;
+}
+
+.time-line-wrapper .time-line-item-group {
+    margin-left: -80px;
+    padding-bottom: 20px;
+}
+
+.time-line-wrapper .time-line-item-group .time-line-title {
+    background: white;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    width: 100px;
+    letter-spacing: 1px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 30px;
+}
+
+.time-line-wrapper .time-line-item {
+    position: relative;
+    display: table;
+    margin-top: 25px;
+    height: 100%;
+}
+
+.time-line-wrapper .time-line-item .time-line-day {
+    width: 80px;
+    height: 100%;
+    line-height: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+
+.time-line-wrapper .time-line-item .time-line-day span {
+    display: block;
+    top: 50%;
+    width: 100%;
+    line-height: 100%;
+    padding-left: 25px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.time-line-wrapper .time-line-item .time-line-content {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+    position: relative;
+    padding-left: 28px; /*内容着色区域距离左边宽度*/
+}
+
+.time-line-wrapper .time-line-item .time-line-content .point {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: white;
+    overflow: hidden;
+    border: 4px solid white;
+}
+
+.time-line-wrapper .time-line-item .time-line-content .content-wrapper {
+    background: white;
+    letter-spacing: 2px;
+    padding: 12px;
+    height: 100%;
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    width: auto;
+    border-radius: 1px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.time-line-wrapper .time-line-item .time-line-content .corner {
+    top: 50%;
+    position: absolute;
+    left: 18px; /*距离线*/
+    transform: translateY(-50%);
+    border-right: 12px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+/*时间轴结束*/
 
 /*归档页结束*/
 
@@ -1433,6 +1540,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 
     .breadcrumb {
         margin: 10px 10px 0px 10px;
+    }
+
+    .time-line-wrapper{
+        padding: 10px;
     }
 
     /*小屏幕 middle 中的内容padding缩小结束*/
