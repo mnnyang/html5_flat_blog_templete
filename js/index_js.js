@@ -98,30 +98,30 @@ function initSettingButton() {
 
 function initLeftGlideButton() {
     $('#bars_button').on('click', function () {
-        if ($('.main-page').css('marginLeft') == '200px') {
+        if ($('.main-page, .main-big-page').css('marginLeft') == '200px') {
 
-            $('.main-page').animate({marginLeft: 0}, 300, function () {
+            $('.main-page, .main-big-page').animate({marginLeft: 0}, 300, function () {
             });
         } else {
-            $('.main-page').animate({marginLeft: '200px'}, 300, function () {
+            $('.main-page, .main-big-page').animate({marginLeft: '200px'}, 300, function () {
             });
         }
     });
 }
 
 function animCloseLeftGlide() {
-    if ($('.main-page').is(':animated')) {
+    if ($('.main-page, .main-big-page').is(':animated')) {
         return;
     }
-    $('.main-page').animate({marginLeft: 0}, 100);
+    $('.main-page, .main-big-page').animate({marginLeft: 0}, 100);
 }
 
 function animOpenLeftGlide() {
-    if ($('.main-page').is(':animated')) {
+    if ($('.main-page, .main-big-page').is(':animated')) {
         return;
     }
 
-    $('.main-page').animate({marginLeft: '200px'}, 100, function () {
+    $('.main-page, .main-big-page').animate({marginLeft: '200px'}, 100, function () {
     });
 }
 
@@ -129,8 +129,9 @@ function initLeftGlideState() {
     var result = window.matchMedia('(max-width: 768px)');
 
     if (result.matches) {
-        console.log('页面宽度小于等于768px');
+        console.log('页面宽度小于等于768px--');
         $('.main-page').css('marginLeft', 0);
+        $('.main-big-page').css('marginLeft', 0);
 
     } else {
         console.log('页面宽度大于768px');

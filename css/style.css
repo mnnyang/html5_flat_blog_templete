@@ -460,12 +460,25 @@ ul {
 
 /************************main-page*/
 .main-page {
-    table-layout:fixed;
-    word-wrap:break-word;
+    table-layout: fixed;
+    word-wrap: break-word;
     display: table;
     margin-left: 200px;
     border-color: #0066cc;
     width: 720px;
+    padding-top: 50px;
+    height: 100%;
+    background-color: rgba(241, 243, 244, 1);
+    position: relative;
+    padding-bottom: 54px;
+    overflow-x: auto; /*Safari */
+}
+
+.main-big-page {
+    display: table;
+    margin-left: 200px;
+    border-color: #0066cc;
+    width: 970px;
     padding-top: 50px;
     height: 100%;
     background-color: rgba(241, 243, 244, 1);
@@ -1418,7 +1431,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         width: 900px;
     }
 
-    #footer{
+    .container .main-big-page {
+        width: 1150px;
+    }
+
+    #footer {
         width: 1150px;
     }
 
@@ -1444,7 +1461,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         width: 500px;
     }
 
-    #footer{
+    .container .main-big-page {
+        width: 750px;
+    }
+
+    #footer {
         width: 750px;
     }
 
@@ -1485,11 +1506,15 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         max-width: 750px;
     }
 
-    #footer{
+    #footer {
         width: 550px;
     }
 
     .container .main-page {
+        width: 550px;
+    }
+
+    .container .main-big-page{
         width: 550px;
     }
 
@@ -1513,11 +1538,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         display: block;
     }
 
-    .pag-max-width ,#footer{
+    .pag-max-width, #footer {
         max-width: 100%;
     }
 
-    #footer{
+    #footer {
         width: 100%
     }
 
@@ -1526,10 +1551,9 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         width: 100%;
     }
 
+    .container .main-big-page,
     .container .main-page {
-        /*margin-left: 0;*/
         width: 100%;
-        /*overflow: hidden;*/
     }
 
     .card-small-article .img,
@@ -1539,7 +1563,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 }
 
 @media (max-width: 600px) {
-    #footer{
+    #footer {
         width: 100%;
     }
 
@@ -1566,7 +1590,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         margin: 10px 10px 0px 10px;
     }
 
-    .time-line-wrapper{
+    .time-line-wrapper {
         padding: 10px;
     }
 
