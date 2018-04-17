@@ -830,9 +830,11 @@ ul {
 #footer {
     position: absolute;
     right: 0;
+    box-sizing: border-box;
     bottom: 0;
     left: 0;
     padding: 16px;
+    width: 970px;
     border-top: 1px rgba(57, 62, 79, 0.15) solid;
     font-size: 14px;
     color: rgba(107, 118, 121, 0.7);
@@ -1416,6 +1418,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         width: 900px;
     }
 
+    #footer{
+        width: 1150px;
+    }
+
     .card-big-article .img {
         height: 250px;
     }
@@ -1436,6 +1442,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 
     .container .main-page {
         width: 500px;
+    }
+
+    #footer{
+        width: 750px;
     }
 
     .card-big-article .text .article-title,
@@ -1475,6 +1485,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         max-width: 750px;
     }
 
+    #footer{
+        width: 550px;
+    }
+
     .container .main-page {
         width: 550px;
     }
@@ -1499,8 +1513,12 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
         display: block;
     }
 
-    .pag-max-width {
+    .pag-max-width ,#footer{
         max-width: 100%;
+    }
+
+    #footer{
+        width: 100%
     }
 
     .container {
@@ -1521,6 +1539,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 }
 
 @media (max-width: 600px) {
+    #footer{
+        width: 100%;
+    }
+
     .card-small-article .img,
     .card-big-article .img {
         height: 180px;
