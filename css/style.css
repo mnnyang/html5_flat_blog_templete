@@ -460,10 +460,12 @@ ul {
 
 /************************main-page*/
 .main-page {
+    table-layout:fixed;
+    word-wrap:break-word;
     display: table;
     margin-left: 200px;
     border-color: #0066cc;
-    width: 970px;
+    width: 720px;
     padding-top: 50px;
     height: 100%;
     background-color: rgba(241, 243, 244, 1);
@@ -1411,7 +1413,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
     }
 
     .container .main-page {
-        width: 1150px;
+        width: 900px;
     }
 
     .card-big-article .img {
@@ -1433,7 +1435,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
     }
 
     .container .main-page {
-        width: 750px;
+        width: 500px;
     }
 
     .card-big-article .text .article-title,
