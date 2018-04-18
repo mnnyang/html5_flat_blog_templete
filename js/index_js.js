@@ -70,9 +70,13 @@ function initDirectoryFixed() {
 
         if (st + 50 > defaultDirTop) {
             if (dir.css('position') !== 'fixed') {
-                dir.css('position', 'fixed').css('top', '64px');
+                dir.css('position', 'fixed')
+                    .css('top', '64px')
+                    .css('height', '100%')
+                    .css('padding-bottom','60px');
                 console.log("fixed")
             }
+
         } else {
             if (dir.css('position') !== 'relative') {
                 dir.css('position', 'relative').css('top', '0px').css('width', '209px');
@@ -194,9 +198,9 @@ function initTimeLineColor() {
 /**
  * 页面滑动
  */
-function onPageScroll() {
+var onPageScroll = function() {
     updateGoToTopState();
-}
+};
 
 /**
  * 页面resize
