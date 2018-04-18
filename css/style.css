@@ -324,7 +324,7 @@ body {
 .glide-left-scroll {
     height: 100%;
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     -ms-overflow-style: none; /* IE 10+*/
     overflow: -moz-scrollbars-none; /* Firefox*/
     webkit-overflow-scrolling: touch;
@@ -332,8 +332,8 @@ body {
 
 @-moz-document url-prefix() {
     .glide-left-scroll {
-        overflow-y: scroll;
-        padding-right: 17px;
+        overflow-y: auto;
+        /*padding-right: 17px;*/
     }
 }
 
@@ -627,6 +627,7 @@ body {
     position: relative;
     width: 209px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 #tab .tab-content-item .directory h2 {
@@ -761,7 +762,11 @@ body {
 }
 
 .breadcrumb li:before {
-    content: url("../images/divider.svg");
+    content: '!';
+    width: 1px;
+    background-color: grey;
+    transform: rotate(1245deg);
+    margin-right: 8px;
     height: 10px;
 }
 

@@ -456,64 +456,64 @@
                             </div>
 
                             <div class="directory" id="directory">
-                               <div class="glide-left-scroll">
-                                   <h2>目录</h2>
-                                   <ul class="directory-list">
-                                       <li class="directory-item ">
-                                           <span class="directory-title">程序设计</span>
-                                           <ul class="directory-sublist">
-                                               <li class="directory-item  "><span
-                                                       class="directory-title">s程序设计</span>
-                                               </li>
-                                               <li class="directory-item">
-                                                   <span class="directory-title">s程序设计</span>
-                                                   <ul class="directory-sublist">
-                                                       <li class="directory-item ">
-                                                           <span class="directory-title">y程序设计</span>
-                                                       </li>
-                                                       <li class="directory-item  ">
-                                                           <span class="directory-title">z程序设计</span>
+                                <div class="glide-left-scroll">
+                                    <h2>目录</h2>
+                                    <ul class="directory-list">
+                                        <li class="directory-item ">
+                                            <span class="directory-title">程序设计</span>
+                                            <ul class="directory-sublist">
+                                                <li class="directory-item  "><span
+                                                        class="directory-title">s程序设计</span>
+                                                </li>
+                                                <li class="directory-item">
+                                                    <span class="directory-title">s程序设计</span>
+                                                    <ul class="directory-sublist">
+                                                        <li class="directory-item ">
+                                                            <span class="directory-title">y程序设计</span>
+                                                        </li>
+                                                        <li class="directory-item  ">
+                                                            <span class="directory-title">z程序设计</span>
 
-                                                       </li>
-                                                   </ul>
-                                               </li>
+                                                        </li>
+                                                    </ul>
+                                                </li>
 
-                                               <li class="directory-item">
-                                                   <span class="directory-title">另一个</span>
-                                                   <ul class="directory-sublist">
-                                                       <li class="directory-item  ">
-                                                           <span class="directory-title">zzz</span>
-                                                       </li>
-                                                       <li class="directory-item  ">
-                                                           <span class="directory-title">zzz</span>
-                                                           <ul class="directory-sublist">
-                                                               <li class="directory-item  ">
-                                                                   <span class="directory-title">zzz</span>
-                                                               </li>
-                                                               <li class="directory-item  ">
-                                                                   <span class="directory-title">zzz</span>
+                                                <li class="directory-item">
+                                                    <span class="directory-title">另一个</span>
+                                                    <ul class="directory-sublist">
+                                                        <li class="directory-item  ">
+                                                            <span class="directory-title">zzz</span>
+                                                        </li>
+                                                        <li class="directory-item  ">
+                                                            <span class="directory-title">zzz</span>
+                                                            <ul class="directory-sublist">
+                                                                <li class="directory-item  ">
+                                                                    <span class="directory-title">zzz</span>
+                                                                </li>
+                                                                <li class="directory-item  ">
+                                                                    <span class="directory-title">zzz</span>
 
-                                                               </li>
-                                                           </ul>
-                                                       </li>
-                                                   </ul>
-                                               </li>
-                                           </ul>
-                                       </li>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
 
 
-                                       <li class="directory-item  "><span class="directory-title">程序设计</span>
-                                       </li>
-                                       <li class="directory-item  "><span class="directory-title">程序设计</span>
-                                       </li>
-                                       <li class="directory-item  "><span class="directory-title">程序设计</span>
-                                       </li>
-                                       <li class="directory-item  "><span class="directory-title">程序设计</span>
-                                       </li>
-                                       <li class="directory-item  "><span class="directory-title">最后一个</span>
-                                       </li>
-                                   </ul>
-                               </div>
+                                        <li class="directory-item  "><span class="directory-title">程序设计</span>
+                                        </li>
+                                        <li class="directory-item  "><span class="directory-title">程序设计</span>
+                                        </li>
+                                        <li class="directory-item  "><span class="directory-title">程序设计</span>
+                                        </li>
+                                        <li class="directory-item  "><span class="directory-title">程序设计</span>
+                                        </li>
+                                        <li class="directory-item  "><span class="directory-title">最后一个</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="tab-content-item">
@@ -584,6 +584,11 @@
 <script>
 
     $(function () {
+        /*目录栏 火狐兼容*/
+        if (navigator.userAgent.indexOf('Firefox') >= 0) {
+            $('.directory .glide-left-scroll').css('padding-right','17px');
+        }
+
         var markdownString = '## 引入\n' +
             '\n' +
             '- 仅仅是一个维护Bean工厂接口。\n' +
@@ -680,7 +685,7 @@
                 '</li>';
         }
 
-        // directoryList.html(dirInner);
+        directoryList.html(dirInner);
 
 
         $('.directory-sublist').hide();
