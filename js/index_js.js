@@ -1,4 +1,6 @@
-function initTab(selectedId = 0) {
+
+
+function initTab(selectedId) {
     var tab = $('#tab');
     var tabTitles = tab.find('.tab-title-item');
     var tabContents = tab.find('.tab-content-item');
@@ -151,7 +153,7 @@ function updateGoToTopState() {
     if (window.scrollY > 150) {
         if ($('#go_to_top').css('display') == 'none') {
             $('#go_to_top').show();
-            $('#go_to_top').animate({right: 0}, 150,);
+            $('#go_to_top').animate({right: 0}, 150);
         }
     } else {
         if ($('#go_to_top').css('display') != 'none') {
@@ -209,7 +211,7 @@ $(window).resize(function () {
 
 $(function () {
     initSidebar();
-    initTab();
+    initTab(0);
 
     initDirectoryFixed();
 
@@ -226,7 +228,7 @@ $(function () {
  * 重新打开页面进入网站
  * @param url
  */
-function goToUrlByNewPage(url = "#") {
+function goToUrlByNewPage(url) {
     window.open(url);
 }
 
@@ -234,7 +236,7 @@ function goToUrlByNewPage(url = "#") {
  * 重新打开页面进入网站
  * @param url
  */
-function goToUrlByCurrentPage(url = "#") {
+function goToUrlByCurrentPage(url) {
     window.open(url, '_self');
 }
 

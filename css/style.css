@@ -396,6 +396,7 @@ body {
     box-sizing: border-box;
     font-size: 14px;
     padding: 10px 16px;
+    cursor: pointer;
     color: rgba(57, 62, 79, 0.7);
 }
 
@@ -688,7 +689,6 @@ body {
     color: rgba(170, 183, 188, 1);
 }
 
-
 .breadcrumb {
     margin: 20px 20px 0px 20px;
     padding: 8px 16px;
@@ -699,7 +699,7 @@ body {
     font-size: 14px;
 }
 
-.breadcrumb ul{
+.breadcrumb ul {
     margin: 0;
     padding: 0;
 }
@@ -894,7 +894,7 @@ body {
     margin-bottom: 0px;
 }
 
-.pagination ul{
+.pagination ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -952,9 +952,15 @@ body {
 .page-nav .prev, .page-nav .next {
     font-size: 14px;
     padding: 5px 15px;
+    cursor: pointer;
     border-radius: 30px;
     background: white;
     color: grey;
+}
+
+.page-nav .prev:hover, .page-nav .next:hover,
+.page-nav .prev:focus, .page-nav .next:focus {
+    background: #efefef;
 }
 
 /*页面导航结束*/
