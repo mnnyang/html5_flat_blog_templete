@@ -34,6 +34,7 @@
             width: 100%;
             padding: 2px;
             background: white;
+            box-sizing: border-box;
             border: 1px solid lightgrey;
             object-fit: cover;
         }
@@ -195,7 +196,7 @@
                         <li>
                             <a href="index.html"><span class="fa fa-home"></span>首页</a>
                         </li>
-                        <li>正文</li>
+                        <li><span class="bread-divider">&boxv;</span>正文</li>
                     </ul>
                 </div>
 
@@ -473,7 +474,6 @@
                                                         </li>
                                                         <li class="directory-item  ">
                                                             <span class="directory-title">z程序设计</span>
-
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -584,9 +584,9 @@
 <script>
 
     $(function () {
-        /*目录栏 火狐兼容*/
+        /**目录栏 火狐兼容*/
         if (navigator.userAgent.indexOf('Firefox') >= 0) {
-            $('.directory .glide-left-scroll').css('padding-right','17px');
+            $('.directory .glide-left-scroll').css('padding-right', '17px');
         }
 
         var markdownString = '## 引入\n' +
@@ -659,13 +659,8 @@
 
         var articleHtml = marked(markdownString);
         $('#article-content').html(articleHtml);
-        console.log($(articleHtml));
-
         /*目录*/
         var headerArray = $('#article-content :header');
-
-
-        console.log(headerArray.length);
 
         var directoryList = $('.directory-list');
 
@@ -678,7 +673,7 @@
             var id = headerArray[i].id = "header-" + i;
 
             dirInner +=
-                '<li class="directory-item click-state" href="#' + id + '">' +
+                '<li class="directory-item" href="#' + id + '">' +
                 '<span  class="directory-title">' +
                 headerArray[i].innerHTML +
                 '</span>' +
@@ -687,7 +682,6 @@
 
         directoryList.html(dirInner);
 
-
         $('.directory-sublist').hide();
 
         $('.directory-sublist,.directory-list').on('click', function () {
@@ -695,45 +689,65 @@
         });
 
         $('.directory-item').on('click', function () {
-
-            $(this).parent().children('.directory-item').not($(this)).find('.directory-sublist').slideUp(150);
-
-            $(this).children('.directory-sublist').show(150);
-
-            /*目录跳转*/
-            $("html,body").animate({scrollTop: $($(this).attr('href')).offset().top - 58}, 300);
-            /*58 为状态栏高度*/
+            jumpAndSelectDirItem(this);
         });
-
-
-        $(".main-page").scroll(function () {
-            // console.log('ggg');
-        });
-
     });
 
-    /*TODO 验证可能会不调用js文件*/
+    /**用户手动跳转*/
+    var user_manual_jump = false;
+
+    function jumpAndSelectDirItem(item) {
+        item = $(item);
+        if (item.hasClass('select')) {
+            return;
+        }
+
+        //用户手动跳转
+        user_manual_jump = true;
+
+        item.parent()
+            .children('.directory-item')
+            .removeClass('select')
+            .not(item)
+            .find('.directory-sublist')
+            .slideUp(150);
+
+        item.children('.directory-sublist').show(150);
+        item.addClass('select');
+
+        /*目录跳转*/
+        $("html,body").animate({scrollTop: $(item.attr('href')).offset().top - 58}, 300, function () {
+            user_manual_jump = false;
+        });
+        /*58 为状态栏高度*/
+    }
+
+    function selectDirItemById(id) {
+        var dirItem = $('[href=#' + id + ']');
+        if (dirItem.hasClass('select') || user_manual_jump) {
+            return;
+        }
+
+        $('.directory .directory-item').removeClass('select');
+        dirItem.addClass('select');
+
+    }
+
+    function updateDirState() {
+        var titleList = $('#article-content').find(':header');
+        titleList.each(function () {
+            if ($(this).offset().top - $('html,body').scrollTop() <= 60) {
+                selectDirItemById($(this).attr('id'));
+            }
+        })
+    }
+
+    /**滚动监听*/
     onPageScroll = function () {
-        // var titleTop = $('h2').offset().top;
-        // console.log(titleTop);
-        console.log($('#article-content h3').html());
-        console.log($('#article-content h3').offset().top);
-        console.log($('#article-content h3').top());
-        console.log($('#article-content h3').top);
+        updateGoToTopState();
+
+        updateDirState();
     };
-
-
-    setTimeout(function () {
-        $('#article-content h3').on('scrollSpy:enter', function () {
-            console.log('enter:', $(this).html() + "--进入");
-        });
-
-        $('#article-content h3').on('scrollSpy:exit', function () {
-            console.log('exit:', $(this).html() + "--推出");
-        });
-
-        $('#article-content h3').scrollSpy();
-    }, 1000);
 
     //TODO 带着标签进入页面
 </script>
