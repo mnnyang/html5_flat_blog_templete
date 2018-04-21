@@ -186,10 +186,10 @@ body {
     min-height: 50px;
     margin: 0 auto;
     background: rgba(57, 62, 79, 1);
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);
     box-sizing: border-box;
     z-index: 100;
     position: fixed;
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.20), -10px 0px 20px rgba(0, 0, 0, 0.20);
 }
 
 .header .header-menu {
@@ -296,7 +296,6 @@ body {
     cursor: pointer;
 }
 
-
 .header .header-menu .login .login-form {
     padding: 20px;
     cursor: default;
@@ -366,6 +365,7 @@ body {
     color: #666;
     font-size: 14px;
 }
+
 .header .header-menu .path-drop .path-item .path-time {
     color: #999;
     font-size: 14px;
@@ -453,10 +453,10 @@ body {
     width: 200px;
     background-color: rgba(237, 241, 242, 1);
     position: fixed;
-    padding-top: 50px;
+    margin-top: 50px;
     height: 100%;
     /*overflow: hidden;*/
-    box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.20);
+    box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.20);
 }
 
 .glide-left-scroll::-webkit-scrollbar {
@@ -603,8 +603,9 @@ body {
     height: 100%;
     background-color: white;
     border-left: 1px rgba(57, 62, 79, 0.15) solid;
-
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.20);
     box-sizing: border-box;
+    z-index: 1;
     float: left;
 }
 
@@ -852,7 +853,7 @@ body {
     display: table-cell;
     height: 100%;
     vertical-align: top;
-
+    z-index: 1;
     width: 100%;
 }
 
@@ -1072,6 +1073,9 @@ body {
     font-size: 14px;
     color: rgba(107, 118, 121, 0.7);
     background: rgba(237, 241, 242, 1);
+    z-index: 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.20);
+
 }
 
 .text .article-footer {
@@ -1748,6 +1752,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 
     .commit-item-url {
         width: 100%;
+    }
+
+    .middle {
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.20);
     }
 }
 
