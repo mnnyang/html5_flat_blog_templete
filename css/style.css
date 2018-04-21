@@ -299,7 +299,7 @@ body {
 
 .header .header-menu .login .login-form {
     padding: 20px;
-    cursor: none;
+    cursor: default;
     background: #fafafa;
 }
 
@@ -339,8 +339,8 @@ body {
 .header .header-menu .path-drop {
     line-height: unset;
     min-width: 320px;
-    box-shadow: none;
-    border: 1px solid lightgray;
+    /*box-shadow: none;*/
+    /*border: 1px solid lightgray;*/
     box-sizing: border-box;
     background: #ffffff;
 }
@@ -453,10 +453,10 @@ body {
     width: 200px;
     background-color: rgba(237, 241, 242, 1);
     position: fixed;
-    margin-top: 50px;
+    padding-top: 50px;
     height: 100%;
     /*overflow: hidden;*/
-    /*box-shadow: -10px 0px 40px rgba(0, 0, 0, 0.25);*/
+    box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.20);
 }
 
 .glide-left-scroll::-webkit-scrollbar {
@@ -485,7 +485,7 @@ body {
     height: auto;
     text-align: center;
     padding: 30px 0;
-    border-bottom: 1px rgba(57, 62, 79, 0.07) solid;
+    border-bottom: 1px rgba(57, 62, 79, 0.05) solid;
 }
 
 .glide-left .avatar-box img {
@@ -527,7 +527,7 @@ body {
     margin: 0 auto;
     height: auto;
     padding: 10px 0;
-    border-bottom: 1px rgba(57, 62, 79, 0.07) solid;
+    border-bottom: 1px rgba(57, 62, 79, 0.05) solid;
 }
 
 .glide-left .nav-first .nav-icon {
