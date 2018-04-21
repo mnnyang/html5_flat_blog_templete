@@ -80,6 +80,50 @@ body {
     object-fit: cover;
 }
 
+/*tooltip start*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    /* width: 120px; */
+     width: 100%;
+    max-width: 120px;
+    transform: translateX(-50%);
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 3px 6px;
+    /* 定位 */
+    position: absolute;
+    z-index: 9999;
+    bottom: 130%;
+    left: 50%;
+    /*opacity: 0.5;*/
+    /*transition: opacity 0.5s;*/
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: black;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*tooltip end*/
+
 .pag-max-width {
     max-width: 1170px;
     min-width: 320px;
@@ -694,13 +738,14 @@ body {
     display: inline-block;
 }
 
-#tab .tab-content-item .directory .select > .directory-title{
+#tab .tab-content-item .directory .select > .directory-title {
     background: rgba(0, 0, 0, 0.1);
 }
+
 #tab .tab-content-item .directory .directory-item:focus,
 #tab .tab-content-item .directory .directory-item:hover,
-#tab .tab-content-item .directory .directory-item:active{
-    background: rgba(0,0,0,0.03);
+#tab .tab-content-item .directory .directory-item:active {
+    background: rgba(0, 0, 0, 0.03);
 }
 
 /***********************middle*/
