@@ -46,19 +46,42 @@
                 <span class="fa fa-bars"></span>
             </div>
 
-            <div class="login click-state float-right hide-max-768">
-                <span class=" login-text">登录</span>
+            <div class="login click-state float-right hide-max-768 dropdown">
+                <span class="login-text">登录</span>
                 <span class="login-icon fa fa-sort-desc"></span>
+                <div class="dropdown-content">
+                    <div class="login-form">
+                        <form action="#" method="post">
+                            <input type="text" placeholder="用户名或邮箱">
+                            <input type="password" placeholder="密码">
+                            <button type="submit">登录</button>
+                        </form>
+                    </div>
+                </div>
             </div>
 
-
-            <div class="menu-icon news click-state float-right hide-max-991">
-                <span class="  fa fa-hacker-news"></span>
+            <div class="menu-icon news click-state float-right hide-max-991 dropdown">
+                <span class="fa fa-hacker-news"></span>
+                <div class="dropdown-content path-drop">
+                    <span class="path-title">三言两语</span>
+                    <div class="path-item">
+                        <div class="path-content">这是一些描述,这是一些描述,些描述,一些是一些描述,些描述,一些描述...</div>
+                        <div class="path-time">2018-04-21 11:21</div>
+                    </div>
+                    <div class="path-item">
+                        <div class="path-content">这是一些描述,这是一些描述,些描述,一些描述...</div>
+                        <div class="path-time">2018-04-21 11:21</div>
+                    </div>
+                    <div class="path-item">
+                        <div class="path-content">这是一些描述,这是一些描,这是一些描,这是一些描,这是一些描,这是一些描述,些描述,一些描述...</div>
+                        <div class="path-time">2018-04-21 11:21</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="menu-icon music click-state float-right hide-max-991">
+           <!-- <div class="menu-icon music click-state float-right hide-max-991">
                 <span class="fa fa-music"></span>
-            </div>
+            </div>-->
 
         </div>
 
@@ -107,10 +130,6 @@
                         <li class="nav-item click-state" onclick="goToUrlByCurrentPage('index.html')">
                             <span class="nav-icon fa fa-home"></span>
                             首页
-                        </li>
-                        <li class="nav-item click-state" onclick="goToUrlByNewPage('https://github.com/mnnyang')">
-                            <span class="nav-icon fa fa-github-alt"></span>
-                            GitHub
                         </li>
                     </ul>
                 </div>

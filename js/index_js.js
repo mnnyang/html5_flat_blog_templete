@@ -1,5 +1,3 @@
-
-
 function initTab(selectedId) {
     var tab = $('#tab');
     var tabTitles = tab.find('.tab-title-item');
@@ -73,7 +71,7 @@ function initDirectoryFixed() {
                 dir.css('position', 'fixed')
                     .css('top', '64px')
                     .css('height', '100%')
-                    .css('padding-bottom','60px');
+                    .css('padding-bottom', '60px');
                 console.log("fixed")
             }
 
@@ -174,7 +172,7 @@ function updateGoToTopState() {
  * @param color
  */
 
-var colorList = ['#00BCD4', '#000000', '#E91E63','#673AB7','#FFC107', '#4CAF50'];
+var colorList = ['#00BCD4', '#000000', '#E91E63', '#673AB7', '#FFC107', '#4CAF50'];
 
 function initTimeLineColor() {
     var timeLine = $('#time-line');
@@ -198,7 +196,7 @@ function initTimeLineColor() {
 /**
  * 页面滑动
  */
-var onPageScroll = function() {
+var onPageScroll = function () {
     updateGoToTopState();
 };
 
@@ -210,6 +208,31 @@ $(window).resize(function () {
     hideMobileMenu();
 
     initLeftGlideState();
+});
+
+
+function initDropdowm() {
+    $('.dropdown').on('click', function (e) {
+        if ($(this).children('.dropdown-content').css('display') === 'none') {
+            $('.dropdown .dropdown-content').hide();
+            $(this).children('.dropdown-content').show();
+        } else {
+            $(this).children('.dropdown-content').hide();
+        }
+
+        stopPropagation(e);
+    });
+}
+
+function stopPropagation(e) {
+    if (e.stopPropagation)
+        e.stopPropagation();
+    else
+        e.cancelBubble = true;
+}
+
+$(document).bind('click', function () {
+    $('.dropdown .dropdown-content').css('display', 'none');
 });
 
 
@@ -226,6 +249,8 @@ $(function () {
     initGoToTop();
 
     initTimeLineColor();
+
+    initDropdowm();
 });
 
 /**
