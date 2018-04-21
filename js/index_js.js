@@ -206,7 +206,7 @@ function initDropdowm() {
         stopPropagation(e);
     });
 
-    $('.dropdown').on('click',function (e) {
+    $('.dropdown, .dropdown-content').on('click',function (e) {
         stopPropagation(e);
     });
 }
